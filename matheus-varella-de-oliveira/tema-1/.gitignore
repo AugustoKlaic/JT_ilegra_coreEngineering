@@ -1,0 +1,9 @@
+# Compiled class file
+out/*
+
+# Log file
+*.log
+
+# Idea file
+.idea/
+
