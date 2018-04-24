@@ -32,7 +32,7 @@ public class RandomNumbers implements Runnable {
             oddNumber += 1;
 
             randomNumber = oddNumber;
-            Thread.sleep(900);
+            Thread.sleep(500);
         }
     }
 
