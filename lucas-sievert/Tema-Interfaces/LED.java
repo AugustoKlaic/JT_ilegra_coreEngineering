@@ -21,5 +21,9 @@ public class LED implements Lampada {
 		System.out.println("LED Off");
 		status = false;
 	}
+	
+	public boolean isOn(){
+		return status;
+	}
 
 }
