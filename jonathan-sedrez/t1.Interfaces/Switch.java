@@ -1,4 +1,4 @@
-package etc;
+package com.jonathansedrez.lampada;
 
 public class Switch {
 	
@@ -8,10 +8,7 @@ public class Switch {
 		this.lampada = lampada;
 	}
 	
-	public void liga(){
-		lampada.on();
-	}
-	public void desliga(){
-		lampada.off();
+	public void change(){
+		lampada.turn();
 	}
 }
