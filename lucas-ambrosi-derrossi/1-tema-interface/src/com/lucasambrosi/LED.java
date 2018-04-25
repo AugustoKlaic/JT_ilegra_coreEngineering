@@ -17,7 +17,7 @@ public class LED implements Lamp {
     }
 
     @Override
-    public boolean getEstado() {
+    public boolean getState() {
         return state;
     }
 }
