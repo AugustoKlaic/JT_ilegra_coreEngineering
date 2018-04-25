@@ -3,6 +3,10 @@ package Business;
 public class Switch{
 	private Lampada lampada;
 	
+	public Switch() {
+		
+	}
+	
 	public Switch(Lampada l) {
 		this.lampada = l;
 	}
@@ -14,5 +18,13 @@ public class Switch{
 		else if(lampada.getLigada() == false) {
 			lampada.On();
 		}
+	}
+	
+	public void setSwitch(Lampada l) {
+		lampada = l;
+	}
+	
+	public Lampada getLampada() {
+		return lampada;
 	}
 }
