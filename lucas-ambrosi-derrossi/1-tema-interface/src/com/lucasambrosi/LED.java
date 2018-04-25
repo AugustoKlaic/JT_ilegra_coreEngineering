@@ -1,23 +1,23 @@
-package com.lucasambrosi;
+package com.lucasambrosi._1_tema_interface;
 
-public class LED implements ILampada {
+public class LED implements Lamp {
 
-    private boolean estado;
+    private boolean state;
 
     @Override
     public void on() {
         System.out.println("Lampada LED ligada");
-        estado = true;
+        state = true;
     }
 
     @Override
     public void off() {
         System.out.println("Lampada LED desligada");
-        estado = false;
+        state = false;
     }
 
     @Override
     public boolean getEstado() {
-        return estado;
+        return state;
     }
 }
