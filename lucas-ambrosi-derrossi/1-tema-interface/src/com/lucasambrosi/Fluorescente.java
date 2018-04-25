@@ -1,23 +1,23 @@
-package com.lucasambrosi;
+package com.lucasambrosi._1_tema_interface;
 
-public class Fluorescente implements ILampada {
+public class Fluorescente implements Lamp {
 
-    private boolean estado;
+    private boolean state;
 
     @Override
     public void on() {
         System.out.println("Lampada Fluorescente ligada");
-        estado = true;
+        state = true;
     }
 
     @Override
     public void off() {
         System.out.println("Lampada Fluorescente desligada");
-        estado = false;
+        state = false;
     }
 
     @Override
-    public boolean getEstado() {
-        return estado;
+    public boolean getState() {
+        return state;
     }
 }
