@@ -6,11 +6,13 @@ public class Main {
 		LED lampadaLED = new LED() ;
 		Fluorescente lampadaFluo = new Fluorescente();
 		Switches interruptor = new Switches(lampadaLED);
-		interruptor.Switch("On");
-		interruptor.Switch("Off");
-		Switches interruptor1 = new Switches(lampadaFluo);
-		interruptor1.Switch("On");
-		interruptor1.Switch("Off");
+		interruptor.Switch();
+		interruptor.Switch();
+		interruptor.Switch();
+		interruptor = new Switches(lampadaFluo);
+		interruptor.Switch();
+		interruptor.Switch();
+		interruptor.Switch();
 	
 	}
 
