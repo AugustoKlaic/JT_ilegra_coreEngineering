@@ -1,12 +1,15 @@
-package etc;
+package com.jonathansedrez.thread;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Thread A = new Thread(new ThreadPar());
-		Thread B = new Thread(new ThreadImpar());
-		A.start();
-		B.start();
+		
+		//Cria as Threads
+		Thread ThreadPar = new Thread(new ThreadPar());
+		Thread ThreadImpar = new Thread(new ThreadImpar());
+		
+		//Inicia as Threads
+		ThreadPar.start();
+		ThreadImpar.start();
 	}
-
 }
