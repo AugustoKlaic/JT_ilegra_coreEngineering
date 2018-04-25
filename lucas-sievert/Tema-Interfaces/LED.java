@@ -1,6 +1,8 @@
 
 public class LED implements Lampada {
 
+	public boolean status = false;
+	
 	public LED() {
 		
 	}
@@ -9,6 +11,7 @@ public class LED implements Lampada {
 	public void On() {
 
 		System.out.println("LED On");
+		status = true;
 
 	}
 
@@ -16,7 +19,7 @@ public class LED implements Lampada {
 	public void Off() {
 
 		System.out.println("LED Off");
-
+		status = false;
 	}
 
 }
