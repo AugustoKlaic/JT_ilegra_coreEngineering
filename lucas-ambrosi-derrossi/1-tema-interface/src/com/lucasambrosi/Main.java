@@ -1,4 +1,4 @@
-package com.lucasambrosi;
+package com.lucasambrosi._1_tema_interface;
 
 public class Main {
 
