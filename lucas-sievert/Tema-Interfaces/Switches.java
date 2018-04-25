@@ -1,3 +1,4 @@
+package com.lsievert.temaInterface;
 
 public class Switches {
 
@@ -7,13 +8,13 @@ public class Switches {
 		this.lampada = lampada;
 	}
 	
-	public void Switch() {
+	public void lightSwitch() {
 		
 		if(lampada.isOn()) {
-			lampada.Off();
+			lampada.off();
 		}
 		else {
-			lampada.On();
+			lampada.on();
 		}
 	}
 }

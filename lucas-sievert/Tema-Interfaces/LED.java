@@ -1,29 +1,30 @@
+package com.lsievert.temaInterface;
 
 public class LED implements Lampada {
 
-	public boolean status = false;
+	public boolean lightStatus = false;
 	
 	public LED() {
 		
 	}
 	
 	@Override
-	public void On() {
+	public void on() {
 
 		System.out.println("LED On");
-		status = true;
+		lightStatus = true;
 
 	}
 
 	@Override
-	public void Off() {
+	public void off() {
 
 		System.out.println("LED Off");
-		status = false;
+		lightStatus = false;
 	}
 	
 	public boolean isOn(){
-		return status;
+		return lightStatus;
 	}
 
 }

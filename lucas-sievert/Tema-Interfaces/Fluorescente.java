@@ -1,27 +1,30 @@
+package com.lsievert.temaInterface;
 
 public class Fluorescente implements Lampada {
 
+	public boolean lightStatus = false;
+	
 	public Fluorescente() {
 		
 	}
 
 	@Override
-	public void On() {
+	public void on() {
 
 		System.out.println("Fluorescente On");
-		status = true;
+		lightStatus = true;
 
 	}
 
 	@Override
-	public void Off() {
+	public void off() {
 
 		System.out.println("Fluorescente Off");
-		status = false;
+		lightStatus = false;
 	}
 	
 	public boolean isOn(){
-		return status;
+		return lightStatus;
 	}
 
 }

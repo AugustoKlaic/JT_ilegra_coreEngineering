@@ -1,9 +1,11 @@
+package com.lsievert.temaInterface;
+
 
 public interface Lampada {
 	
-	public void On(); 
+	public void on(); 
 	
-	public void Off();
+	public void off();
 	
 	public boolean isOn();
 

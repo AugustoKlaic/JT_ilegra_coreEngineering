@@ -1,3 +1,4 @@
+package com.lsievert.temaInterface;
 
 public class Main {
 
@@ -6,13 +7,13 @@ public class Main {
 		LED lampadaLED = new LED() ;
 		Fluorescente lampadaFluo = new Fluorescente();
 		Switches interruptor = new Switches(lampadaLED);
-		interruptor.Switch();
-		interruptor.Switch();
-		interruptor.Switch();
+		interruptor.lightSwitch();
+		interruptor.lightSwitch();
+		interruptor.lightSwitch();
 		interruptor = new Switches(lampadaFluo);
-		interruptor.Switch();
-		interruptor.Switch();
-		interruptor.Switch();
+		interruptor.lightSwitch();
+		interruptor.lightSwitch();
+		interruptor.lightSwitch();
 	
 	}
 
