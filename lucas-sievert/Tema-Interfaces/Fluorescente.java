@@ -9,6 +9,7 @@ public class Fluorescente implements Lampada {
 	public void On() {
 
 		System.out.println("Fluorescente On");
+		status = true;
 
 	}
 
@@ -16,7 +17,11 @@ public class Fluorescente implements Lampada {
 	public void Off() {
 
 		System.out.println("Fluorescente Off");
-
+		status = false;
+	}
+	
+	public boolean isOn(){
+		return status;
 	}
 
 }
