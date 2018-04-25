@@ -1,3 +1,7 @@
+package java.com.ilegra.controle;
+
+import java.com.ilegra.lampadas.Fluorescente;
+import java.com.ilegra.lampadas.LED;
 
 public class Main {
 

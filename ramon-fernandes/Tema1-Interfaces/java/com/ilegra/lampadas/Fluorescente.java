@@ -1,3 +1,4 @@
+package java.com.ilegra.lampadas;
 
 public class Fluorescente implements Lampada{
 
@@ -6,18 +7,13 @@ public class Fluorescente implements Lampada{
 	@Override
 	public void on() {
 		System.out.println("Lampada Fluorescente: ligada");
-		Set(true);
+		status = true;
 	}
 
 	@Override
 	public void off() {
 		System.out.println("Lampada Fluorescente: desligada");
-		Set(false);
-	}
-
-	@Override
-	public void Set(boolean bool) {
-		status = bool;
+		status = false;
 	}
 
 	@Override

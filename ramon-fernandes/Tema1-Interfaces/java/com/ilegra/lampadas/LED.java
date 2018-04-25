@@ -1,3 +1,4 @@
+package java.com.ilegra.lampadas;
 
 public class LED implements Lampada{
 	
@@ -6,19 +7,15 @@ public class LED implements Lampada{
 	@Override
 	public void on() {
 		System.out.println("Lampada LED: ligada");
-		Set(true);
+		status = true;
 	}
 
 	@Override
 	public void off() {
 		System.out.println("Lampada LED: desligada");
-		Set(false);
+		status = false;
 	}
 
-	@Override
-	public void Set(boolean bool) {
-		status = bool;
-	}
 
 	@Override
 	public boolean isSet() {
