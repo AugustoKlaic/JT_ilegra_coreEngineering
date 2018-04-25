@@ -7,18 +7,13 @@ public class Switches {
 		this.lampada = lampada;
 	}
 	
-	public void Switch(String Modo) {
+	public void Switch() {
 		
-		if(Modo == "On") {
-			lampada.On();
+		if(lampada.isOn()) {
+			lampada.Off();
 		}
 		else {
-			if(Modo == "Off") {
-				lampada.Off();
-			}
-			else {
-				System.out.println("Unknow");
-			}
+			lampada.On();
 		}
 	}
 }
