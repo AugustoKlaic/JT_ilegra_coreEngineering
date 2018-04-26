@@ -1,10 +1,10 @@
 package com.java.cocaro.tema1;
 
-public class Lampada_troca {
+public class Lampadatroca {
 	private Lampada lampada;
 	
-	public Lampada_troca(Lampada a) {
-		this.lampada = a;
+	public Lampadatroca(Lampada changes) {
+		this.lampada = changes;
 	}
 	
 	public void SwitchOnOff() {
