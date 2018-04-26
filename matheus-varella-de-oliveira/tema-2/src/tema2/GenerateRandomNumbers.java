@@ -9,7 +9,12 @@ public class GenerateRandomNumbers {
         Random randomGenerator = new Random();
         while (true) {
             int random = randomGenerator.nextInt(100);
-            System.out.println(random);
+            if (random % 2 == 0) {
+                System.out.println(random + " even");
+            }else{
+
+                System.out.println(random + " odd");
+            }
         }
     }
 }
