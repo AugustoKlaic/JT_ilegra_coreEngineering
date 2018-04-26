@@ -1,20 +1,39 @@
 package tema2;
 
+
+import jdk.nashorn.internal.ir.FunctionCall;
+
 import java.util.Random;
 
 
 public class GenerateRandomNumbers {
-    public static int generateOdd() {
+    int randomNumber;
 
+    private boolean generateNumber() { //par
         Random randomGenerator = new Random();
-        while (true) {
-            int random = randomGenerator.nextInt(100);
-            if (random % 2 == 0) {
-                System.out.println(random + " even");
-            }else{
+        randomNumber = randomGenerator.nextInt(100);
+        return parity(randomNumber);
+    }
 
-                System.out.println(random + " odd");
-            }
+    public int generateOddNumber() {
+        if (generateNumber()) {
+            System.out.println(randomNumber);
+        } else {
+            System.out.println(++randomNumber);
         }
+        return randomNumber;
+    }
+
+    public int generateEvenNumber() {
+        if (generateNumber()) {
+            System.out.println(++randomNumber);
+        } else {
+            System.out.println(randomNumber);
+        }
+        return randomNumber;
+    }
+
+    private boolean parity(int randomNumber) {
+        return (randomNumber % 2 == 0);
     }
 }
