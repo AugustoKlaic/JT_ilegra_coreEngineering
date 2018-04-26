@@ -8,9 +8,6 @@ public class Operations {
 	}
 
 	public static int randomOdd() {
-			int result = Integer.valueOf((int) (Math.random() * 100));
-			if (result % 2 == 0)
-				result += 1;
-			return result;
+			return randomEven() + 1;
 	};
 }
