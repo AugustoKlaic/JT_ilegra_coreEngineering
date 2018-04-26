@@ -9,18 +9,15 @@ public class ThreadPar implements Runnable{
 	public void run() {
 		
 		while(true) {
-			//Cria um numero aleatório
+			//Cria um numero PAR aleatório
 			ThreadRandom par = new ThreadRandom();
-			int numero = par.geraRandom();
-						
-			//Valida se é par ou impar
-			if(numero%2 == 0) {
-				System.out.print("Numero par: "+ numero + "\n");
-				try {
-					Thread.sleep(sleep);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+			int numero = par.geraPar();
+			System.out.print("Numero par: "+ numero + "\n");
+			//Sleep
+			try {
+				Thread.sleep(sleep);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
 		}
 	}
