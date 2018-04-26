@@ -1,4 +1,4 @@
-package tema2;
+package com.ilegra.matheus.tema2;
 
 public class PrinterEven implements Runnable {
 

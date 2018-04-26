@@ -1,7 +1,5 @@
-package tema2;
+package com.ilegra.matheus.tema2;
 
-
-import jdk.nashorn.internal.ir.FunctionCall;
 
 import java.util.Random;
 
