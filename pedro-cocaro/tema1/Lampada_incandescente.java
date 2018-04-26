@@ -1,11 +1,9 @@
 package com.java.cocaro.tema1;
 
-public class Lampada_incandescente implements Lampada {
+public class Lampadaincandescente implements Lampada {
 	
 	private boolean ligada = false;
 	
-	public Lampada_incandescente() {
-	}
 	@Override
 	public void on() {
 		System.out.println("Lampada incandescente acesa");
