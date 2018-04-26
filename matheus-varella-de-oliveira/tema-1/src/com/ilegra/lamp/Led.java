@@ -1,6 +1,6 @@
 package com.ilegra.lamp;
 
-public class Led implements ILamp {
+public class Led implements Lamp {
     boolean status = false;
 
     public void on() {

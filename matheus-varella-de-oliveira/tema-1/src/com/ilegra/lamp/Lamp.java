@@ -1,6 +1,6 @@
 package com.ilegra.lamp;
 
-public interface ILamp {
+public interface Lamp {
     void on();
 
     void off();

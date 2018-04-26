@@ -1,9 +1,9 @@
 package com.ilegra.lamp;
 
 public class Switch {
-    ILamp lamp;
+    Lamp lamp;
 
-    public Switch(ILamp nojeira) {
+    public Switch(Lamp nojeira) {
         this.lamp = nojeira;
     }
 

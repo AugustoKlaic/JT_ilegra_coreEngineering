@@ -1,6 +1,6 @@
 package com.ilegra.lamp;
 
-public class Neon implements ILamp {
+public class Neon implements Lamp {
 
     boolean status = false;
 
