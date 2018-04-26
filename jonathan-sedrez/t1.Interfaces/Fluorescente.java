@@ -1,27 +1,31 @@
-package etc;
+package com.jonathansedrez.lampada;
 
 public class Fluorescente implements Lampada{
 
-	public int status = 0;
+	public boolean status = false;
 
 	@Override
 	public void on() {
-		if (status == 0) {
-			status = 1;
+		if (status == false) {
+			status = true;
 			System.out.println("Lampada Fluorescente ligada");
-		} else {
-			System.out.println("Lampa Fluorescente ja esta ligada");	
 		}
 	}
 
 	@Override
 	public void off() {
-		if (status == 1) {
-			status = 0;
+		if (status == true) {
+			status = false;
 			System.out.println("Lampada Fluorescente desligada");
-		} else {
-			System.out.println("Lampa Fluorescente ja esta desligada");
 		}
 	}
 	
+	@Override
+	public void turn() {
+		if(status == true) {
+			off();
+		} else {
+			on();
+		}
+	}
 }

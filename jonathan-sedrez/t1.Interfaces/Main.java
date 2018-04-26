@@ -1,16 +1,16 @@
-package etc;
+package com.jonathansedrez.lampada;
 
 public class Main {
 	public static void main (String [] args) {
-		Switch l1 = new Switch(new Incandecente());
-		Switch l2 = new Switch(new Fluorescente());
+		Switch LampadaIncandecente  = new Switch(new Incandecente());
+		Switch LampadaFluorescente  = new Switch(new Fluorescente());
 		
-		l1.liga();
-		l1.desliga();
-		l1.liga();		
+		LampadaIncandecente.change();
+		LampadaIncandecente.change();
+		LampadaIncandecente.change();		
 		
-		l2.liga();
-		l2.desliga();
-		l2.liga();	
+		LampadaFluorescente.change();
+		LampadaFluorescente.change();
+		LampadaFluorescente.change();
 	}
 }
