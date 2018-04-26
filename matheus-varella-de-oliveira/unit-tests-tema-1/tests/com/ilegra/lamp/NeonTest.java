@@ -12,7 +12,7 @@ public class NeonTest {
     public void before() {
         neonLamp = new Neon();
     }
-    
+
     @Test
     public void getStatus() {
         assertEquals(false, neonLamp.getStatus());
