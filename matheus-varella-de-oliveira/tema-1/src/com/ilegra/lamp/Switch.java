@@ -3,8 +3,8 @@ package com.ilegra.lamp;
 public class Switch {
     Lamp lamp;
 
-    public Switch(Lamp nojeira) {
-        this.lamp = nojeira;
+    public Switch(Lamp lamp) {
+        this.lamp = lamp;
     }
 
     public void switcher(){
