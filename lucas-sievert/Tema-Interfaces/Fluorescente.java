@@ -4,9 +4,7 @@ public class Fluorescente implements Lampada {
 
 	public boolean lightStatus = false;
 	
-	public Fluorescente() {
-		
-	}
+	
 
 	@Override
 	public void on() {
