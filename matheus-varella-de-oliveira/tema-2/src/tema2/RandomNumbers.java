@@ -19,20 +19,23 @@ public class RandomNumbers implements Runnable {
                 } else if (threadID == 2) {
                     randomEven();
                 }
-                Thread.sleep(1000);
             } catch (InterruptedException e) {
 
             }
         }
     }
 
-    public void randomOdd() throws InterruptedException {
+    public void randomOdd() {
         int oddNumber = Integer.valueOf((int) (Math.random() * 100));
         if (oddNumber % 2 != 0) {
             oddNumber += 1;
 
             randomNumber = oddNumber;
-            Thread.sleep(500);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
