@@ -4,9 +4,7 @@ public class LED implements Lampada {
 
 	public boolean lightStatus = false;
 	
-	public LED() {
-		
-	}
+	
 	
 	@Override
 	public void on() {
