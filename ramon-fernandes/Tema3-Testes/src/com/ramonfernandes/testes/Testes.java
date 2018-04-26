@@ -27,14 +27,12 @@ public class Testes {
 	
 	@Test
 	public void testIfStartsTurnedOff() {
-		//Testa se lampada iniciam desligadas
 		assertEquals(false, lampadaFluorescente.isSet());
 		assertEquals(false, lampadaLED.isSet());
 	}
 	
 	@Test
 	public void testOn() {
-		//Testa se método On liga lampadas
 		assertEquals(false, lampadaFluorescente.isSet());
 		lampadaFluorescente.on();
 		assertEquals(true, lampadaFluorescente.isSet());
