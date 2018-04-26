@@ -7,16 +7,16 @@ public class Switch{
 		
 	}
 	
-	public Switch(Lampada l) {
-		this.lampada = l;
+	public Switch(Lampada lampada) {
+		this.lampada = lampada;
 	}
 	
 	public void SwitchOnOff() {
 		if(lampada.getLigada() == true) {
-			lampada.Off();
+			lampada.off();
 		}
 		else if(lampada.getLigada() == false) {
-			lampada.On();
+			lampada.on();
 		}
 	}
 	

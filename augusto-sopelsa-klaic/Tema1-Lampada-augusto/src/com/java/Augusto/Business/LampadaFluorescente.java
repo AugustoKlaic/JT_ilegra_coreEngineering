@@ -2,32 +2,32 @@ package com.java.Augusto.Business;
 
 public class LampadaFluorescente implements Lampada{
 
-	private boolean Ligada;
+	private boolean ligada;
 	
 	public LampadaFluorescente() {
 		super();
-		Ligada = false;
+		ligada = false;
 	}
 	
 	public LampadaFluorescente(boolean x) {
 		super();
-		this.Ligada = x;
+		this.ligada = x;
 	}
 	
 	@Override
 	public boolean getLigada() {
-		return Ligada;
+		return ligada;
 	}
 	
 	@Override
-	public void On() {
-		Ligada = true;
-		System.out.println("A lampada Fluorescente esta Ligada.");
+	public void on() {
+		ligada = true;
+		System.out.println("A lampada Fluorescente esta ligada.");
 	}
 
 	@Override
-	public void Off() {
-		Ligada = false;
+	public void off() {
+		ligada = false;
 		System.out.println("A lampada Fluorescente esta Desligada.");
 	}
 }

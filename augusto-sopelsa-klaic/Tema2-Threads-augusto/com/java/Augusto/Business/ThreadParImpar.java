@@ -5,6 +5,9 @@ public class ThreadParImpar implements Runnable {
 	private int threadID;
 	private int RandonNumb;
 
+	public static final int timesleepimpar = 100;
+	public static final int timesleeppar = 500;
+
 	public ThreadParImpar(int id) {
 		this.threadID = id;
 		this.RandonNumb = 0;
@@ -15,34 +18,38 @@ public class ThreadParImpar implements Runnable {
 
 			System.out.println("Thread number " + threadID + "-> " + RandonNumb);
 
-			try {
-				if (threadID == 1) {
-					randomOdd();
-				} else if (threadID == 2) {
-					randomEven();
-				}
-			} catch (InterruptedException e) {
-
+			if (threadID == 1) {
+				randomOdd();
+			} else if (threadID == 2) {
+				randomEven();
 			}
 		}
 	}
 
-	public void randomEven() throws InterruptedException {
+	public void randomEven() {
 		int numeroPar = Integer.valueOf((int) (Math.random() * 10));
 		if (numeroPar % 2 != 0)
 			numeroPar += 1;
 
 		RandonNumb = numeroPar;
-		Thread.sleep(500);
+		try {
+			Thread.sleep(timesleeppar);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 	}
 
-	public void randomOdd() throws InterruptedException {
+	public void randomOdd() {
 		int numeroImpar = Integer.valueOf((int) (Math.random() * 10));
 		if (numeroImpar % 2 == 0)
 			numeroImpar += 1;
 
 		RandonNumb = numeroImpar;
-		Thread.sleep(100);
+		try {
+			Thread.sleep(timesleepimpar);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	};
 }

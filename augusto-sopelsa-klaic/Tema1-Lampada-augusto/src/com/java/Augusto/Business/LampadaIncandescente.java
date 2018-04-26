@@ -1,32 +1,32 @@
 package com.java.Augusto.Business;
 
 public class LampadaIncandescente implements Lampada{
-	private boolean Ligada;
+	private boolean ligada;
 	
 	public LampadaIncandescente() {
 		super();
-		Ligada = false;
+		ligada = false;
 	}
 	
 	public LampadaIncandescente(boolean x) {
 		super();
-		this.Ligada = x;
+		this.ligada = x;
 	}
 	
 	@Override
 	public boolean getLigada() {
-		return Ligada;
+		return ligada;
 	}
 
 	@Override
-	public void On() {
-		Ligada = true;
-		System.out.println("A lampada Incandescente esta Ligada.");
+	public void on() {
+		ligada = true;
+		System.out.println("A lampada Incandescente esta ligada.");
 	}
 
 	@Override
-	public void Off() {
-		Ligada = false;
+	public void off() {
+		ligada = false;
 		System.out.println("A lampada Incandescente esta Desligada.");
 	}
 }
