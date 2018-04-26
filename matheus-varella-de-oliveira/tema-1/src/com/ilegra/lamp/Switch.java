@@ -7,11 +7,11 @@ public class Switch {
         this.lamp = lamp;
     }
 
-    public void switcher(){
-        if (lamp.getStatus()){
+    public void switcher() {
+        if (lamp.getStatus()) {
             lamp.off();
-            return;
+        } else {
+            lamp.on();
         }
-        lamp.on();
     }
 }
