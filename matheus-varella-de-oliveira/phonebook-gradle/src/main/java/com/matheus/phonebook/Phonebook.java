@@ -63,5 +63,16 @@ public class Phonebook {
     }
 
 
-
+    public void findContactByname(String name) {
+        for (int i = 0; i < myList.size(); i++) {
+            if (myList.get(i).getName().contains(name)) {
+                System.out.println("achou contato por nome!!!!------");
+                System.out.println(myList.get(i).getPhonenumber());
+                System.out.println(myList.get(i).getName());
+                System.out.println(myList.get(i).getEmail());
+                System.out.println(myList.get(i).getId());
+            }
+        }
+//fazer construtor e retornar objeto em todos esses metodos pra um metodo print com override p lista, ou qqr outra coisa q possa ter sido retornado daqui
+    }
 }

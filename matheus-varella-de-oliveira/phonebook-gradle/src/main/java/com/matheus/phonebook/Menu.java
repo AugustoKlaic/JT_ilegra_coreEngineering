@@ -13,6 +13,7 @@ public class Menu {
         System.out.println("Para listar todos os contatos digite 2 e pressione enter");
         System.out.println("Para remove um contato digite 3 e pressione enter");
         System.out.println("Para encontrar um contato por iD digite 4 e pressione enter");
+        System.out.println("Para encontrar um contato por nome digite 5 e pressione enter");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -40,7 +41,7 @@ public class Menu {
                 break;
 
             case 5: //find contact by name
-                phonebook.findContactById(ScannerData.ScannerId());
+                phonebook.findContactByname(ScannerData.ScannerName());
                 menu();
                 break;
 
