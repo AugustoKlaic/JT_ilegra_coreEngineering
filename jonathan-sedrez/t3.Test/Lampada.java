@@ -8,6 +8,5 @@ public interface Lampada {
 
 	public void turn();
 	
-	//Método utilizado para teste
 	public boolean verStatus();
 }

@@ -2,7 +2,7 @@ package com.jonathansedrez.lampada;
 
 public class Incandecente implements Lampada{
 
-	public boolean status = false;
+	private boolean status = false;
 
 	@Override
 	public void on() {
@@ -22,14 +22,13 @@ public class Incandecente implements Lampada{
 	
 	@Override
 	public void turn() {
-		if(status == true) {
+		if(status) {
 			off();
 		} else {
 			on();
 		}
 	}
-	
-	//Método utilizado para teste
+
 	@Override
 	public boolean verStatus() {
 		return status;

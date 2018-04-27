@@ -2,17 +2,17 @@ package com.jonathansedrez.lampada;
 
 public class Main {
 	public static void main (String [] args) {
-		Switch LampadaIncandecente  = new Switch(new Incandecente());
-		Switch LampadaFluorescente  = new Switch(new Fluorescente());
+		Switch lampadaIncandecente  = new Switch(new Incandecente());
+		Switch lampadaFluorescente  = new Switch(new Fluorescente());
 		
-		LampadaIncandecente.change();
-		LampadaIncandecente.change();
-		LampadaIncandecente.change();		
+		lampadaIncandecente.change();
+		lampadaIncandecente.change();
+		lampadaIncandecente.change();		
 		
-		LampadaFluorescente.change();
-		LampadaFluorescente.change();
-		LampadaFluorescente.change();
-		LampadaFluorescente.verStatus();
+		lampadaFluorescente.change();
+		lampadaFluorescente.change();
+		lampadaFluorescente.change();
+		lampadaFluorescente.verStatus();
 		
 	}
 }
