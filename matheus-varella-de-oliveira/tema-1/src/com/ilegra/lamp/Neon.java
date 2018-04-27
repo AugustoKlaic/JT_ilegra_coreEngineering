@@ -2,7 +2,7 @@ package com.ilegra.lamp;
 
 public class Neon implements Lamp {
 
-    boolean status = false;
+    private boolean status = false;
 
     public void on() {
         status = true;
