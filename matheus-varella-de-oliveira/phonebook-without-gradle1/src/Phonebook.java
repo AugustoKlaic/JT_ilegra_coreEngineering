@@ -6,8 +6,15 @@ public class Phonebook {
 
     public void addContact(Contact contact) {
         myList.add(contact);
-        System.out.println(myList.get(0).getEmail());
-        System.out.println(myList.get(0).getName());
-        System.out.println(myList.get(0).getPhonenumber());
     }
+
+    public Contact selectData() {
+        Contact littleContact;
+        littleContact = new Contact();
+        littleContact.setEmail(ScannerData.ScannerEmail());
+        littleContact.setName(ScannerData.ScannerName());
+        littleContact.setPhonenumber(ScannerData.ScannerNumber());
+        return littleContact;
+    }
+
 }
