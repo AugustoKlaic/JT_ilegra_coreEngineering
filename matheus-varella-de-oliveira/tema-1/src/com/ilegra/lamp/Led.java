@@ -1,7 +1,7 @@
 package com.ilegra.lamp;
 
 public class Led implements Lamp {
-    boolean status = false;
+    private boolean status = false;
 
     public void on() {
         status = true;
@@ -16,5 +16,9 @@ public class Led implements Lamp {
 
     public boolean getStatus() {
         return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }
