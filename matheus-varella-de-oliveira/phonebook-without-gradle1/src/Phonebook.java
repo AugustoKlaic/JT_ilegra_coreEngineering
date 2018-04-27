@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Phonebook {
     ArrayList<Contact> myList = new ArrayList<Contact>();
+//    A lista está zerando ou nao esta adicionando
+    Contact littleContact;
 
 
     public void addContact(Contact contact) {
@@ -9,7 +11,6 @@ public class Phonebook {
     }
 
     public Contact selectData() {
-        Contact littleContact;
         littleContact = new Contact();
         littleContact.setEmail(ScannerData.ScannerEmail());
         littleContact.setName(ScannerData.ScannerName());
@@ -19,6 +20,7 @@ public class Phonebook {
 
     public void listContacts() {
         System.out.println("zzzzza");
+        System.out.println("Quantidade  de contatos na lista:" + myList.size());
         for (int i = 0; i < myList.size(); i++) {
             System.out.println("aaa");
             System.out.print(myList.get(i).getPhonenumber());
