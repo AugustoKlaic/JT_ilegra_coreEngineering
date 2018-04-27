@@ -1,12 +1,14 @@
 package com.ilegra.campostema1;
 
 public class LED implements Lampada {
+	
+	private boolean status = false;
+
 	public LED () {
 		this.status = false;
 	}
 
-	boolean status = false;
-	
+
 	public boolean isStatus() {
 		return status;
 	}

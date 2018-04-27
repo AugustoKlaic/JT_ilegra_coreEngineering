@@ -2,7 +2,7 @@ package com.ilegra.campostema1;
 
 public class Fluorecente implements Lampada {
 
-	boolean status = false; 
+	private boolean status = false; 
 	
 	public boolean isStatus() {
 		return status;
