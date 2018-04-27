@@ -11,7 +11,7 @@ public class Switch{
 		this.lampada = lampada;
 	}
 	
-	public void SwitchOnOff() {
+	public void switchOnOff() {
 		if(lampada.getLigada() == true) {
 			lampada.off();
 		}

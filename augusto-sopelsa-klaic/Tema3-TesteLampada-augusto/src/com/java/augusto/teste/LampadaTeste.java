@@ -168,9 +168,9 @@ public class LampadaTeste {
 		System.out.println("Testando o switch S1...");
 
 		// Switch S1 ja é construido com 1 lampada
-		switch1.SwitchOnOff();// Liga a lampada
+		switch1.switchOnOff();// Liga a lampada
 		assertEquals(true, Fluorescente1.getLigada());
-		switch1.SwitchOnOff();// Desliga a lampada
+		switch1.switchOnOff();// Desliga a lampada
 		assertEquals(false, Fluorescente1.getLigada());
 	}
 
@@ -181,9 +181,9 @@ public class LampadaTeste {
 
 		// Switch S2 não tem uma lampada associada ainda
 		switch2.setSwitch(Incandescente1);// Associa uma lampada
-		switch2.SwitchOnOff();// Liga a lampada
+		switch2.switchOnOff();// Liga a lampada
 		assertEquals(true, Incandescente1.getLigada());
-		switch2.SwitchOnOff();// Desliga a lapada
+		switch2.switchOnOff();// Desliga a lapada
 		assertEquals(false, Incandescente1.getLigada());
 	}
 }

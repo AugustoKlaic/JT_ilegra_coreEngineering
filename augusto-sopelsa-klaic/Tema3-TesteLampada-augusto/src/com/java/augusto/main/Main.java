@@ -9,11 +9,11 @@ public class Main{
 		Switch switch2 = new Switch(new LampadaIncandescente());
 		
 		while(true) {
-			switch1.SwitchOnOff();
-			switch1.SwitchOnOff();
+			switch1.switchOnOff();
+			switch1.switchOnOff();
 		
-			switch2.SwitchOnOff();
-			switch2.SwitchOnOff();
+			switch2.switchOnOff();
+			switch2.switchOnOff();
 		}
 	}
 }
