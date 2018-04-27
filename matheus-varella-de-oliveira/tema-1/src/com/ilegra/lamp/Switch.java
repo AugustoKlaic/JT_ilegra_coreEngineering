@@ -1,7 +1,7 @@
 package com.ilegra.lamp;
 
 public class Switch {
-    Lamp lamp;
+    private Lamp lamp;
 
     public Switch(Lamp lamp) {
         this.lamp = lamp;
@@ -13,5 +13,13 @@ public class Switch {
         } else {
             lamp.on();
         }
+    }
+    
+    public Lamp getLamp() {
+        return lamp;
+    }
+
+    public void setLamp(Lamp lamp) {
+        this.lamp = lamp;
     }
 }
