@@ -1,0 +1,48 @@
+package com.lucasambrosi._4_tema_agenda.Classes;
+
+public class Person {
+
+    private String name, email, phone;
+    private int id;
+
+    public Person(int id, String name, String email, String phone) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %s - Nome: %s - Email: %s - Telefone: %s", getId(), getName(), getEmail(), getPhone()
+        ) ;
+    }
+}
