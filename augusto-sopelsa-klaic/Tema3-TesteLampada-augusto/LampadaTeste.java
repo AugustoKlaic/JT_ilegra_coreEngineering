@@ -154,7 +154,7 @@ public class LampadaTeste {
 	@Test
 	public void testeOnOffI3() {
 
-		System.out.println("Testando I3 liga/desliga...");
+		System.out.println("Testando I3 liga/desliga..."); 
 
 		Incandescente3.on();// Liga I3 que esta desligada
 		assertEquals(true, Incandescente3.getLigada());
