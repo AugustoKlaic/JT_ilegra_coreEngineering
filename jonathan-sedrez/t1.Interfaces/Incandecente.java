@@ -22,7 +22,7 @@ public class Incandecente implements Lampada{
 	
 	@Override
 	public void turn() {
-		if(status == true) {
+		if(status) {
 			off();
 		} else {
 			on();
