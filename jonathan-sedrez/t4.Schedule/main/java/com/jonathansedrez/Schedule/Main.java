@@ -7,12 +7,11 @@ public class Main {
     public static void main (String [] args) {
 
         Scanner input = new Scanner (System.in);
-
-        //Cria um usuário da agenda
         Schedule user = new Schedule();
-
-        boolean opc = true;
-        while(opc == true){
+        int id=0;
+        boolean operation = true;
+       
+        while(operation == true){
             System.out.println("---------------------");
             System.out.println("Chose a option");
             System.out.println("[1] Add");
@@ -22,13 +21,14 @@ public class Main {
 
             int inputChoice;
             inputChoice = input.nextInt();
-
+           
             switch (inputChoice) {
                 case 1:
-                    String name;
+                	id += 1;
+                	String name;
                     String email;
-                    String fone;
-
+                    String fone;                    
+                    
                     System.out.print("Contact name: ");
                     name = input.next();
                     System.out.print("Contact email: ");
@@ -36,13 +36,12 @@ public class Main {
                     System.out.print("Contact fone: ");
                     fone = input.next();
 
-                    user.add(new Contact(name, email, fone));
+                    user.add(new Contact(id, name, email, fone));
                     break;
                 case 2:
                     System.out.println("Enter ID contact to remove");
-                    int id = input.nextInt();
-                    user.remove(id);
-                    System.out.println("Contact removed!");
+                    int idContact = input.nextInt();
+                    user.remove(idContact);
                     break;
                 case 3:
                     user.list();
@@ -69,13 +68,12 @@ public class Main {
                 default:
                     System.out.println("Invalid command!");
             }
-            //Questiona se usuário deseja continuar operando
             System.out.println("---------------------");
             System.out.println("Enter 1 to continue");
             int check = input.nextInt();
             if(check != 1){
                 System.out.println("Good bye!");
-                opc=false;
+                operation=false;
             }
         }
     }

@@ -8,8 +8,8 @@ public class Contact {
     private String fone;
 
     //Constructor without ID
-    public Contact(String name, String email, String fone) {
-        this.id =+ 1;
+    public Contact(int id, String name, String email, String fone) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.fone = fone;
