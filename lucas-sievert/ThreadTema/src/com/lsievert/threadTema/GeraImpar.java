@@ -5,7 +5,6 @@ import java.util.Random;
 public class GeraImpar {
 	
 	private static final int NUM_MAX = 100;
-	boolean imparGerado = false;
 	
 	public int geraNovoImpar() {
 		
