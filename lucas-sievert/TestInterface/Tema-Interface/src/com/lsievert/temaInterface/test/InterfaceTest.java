@@ -29,20 +29,20 @@ public class InterfaceTest {
 	
 	@Test
 	public void testeConstrutor() {
-		assertEquals(false,lampadaFluo.isOn()); //Construída com Sucesso e apagada
-		assertEquals(false, lampadaLED.isOn()); //Construída LED com Sucesso e apagada
+		assertEquals(false,lampadaFluo.isOn()); 
+		assertEquals(false, lampadaLED.isOn()); 
 	}
 	
 	@Test
 	public void testOn() {
 		assertEquals(false, lampadaFluo.isOn());
 		lampadaFluo.on();
-		assertEquals(true, lampadaFluo.isOn()); // Método para acender luz funciona Fluorescente
+		assertEquals(true, lampadaFluo.isOn());
 		
 		
 		assertEquals(false, lampadaLED.isOn());
 		lampadaLED.on();
-		assertEquals(true, lampadaLED.isOn()); // Método para acender luz funciona Fluorescente
+		assertEquals(true, lampadaLED.isOn()); 
 		
 		
 	}
@@ -53,12 +53,12 @@ public class InterfaceTest {
 		lampadaFluo.on();
 		assertEquals(true, lampadaFluo.isOn());
 		lampadaFluo.off();
-		assertEquals(false, lampadaFluo.isOn()); // Testa se off apaga lampada quando está acesa
+		assertEquals(false, lampadaFluo.isOn()); 
 		
 		lampadaLED.on();
 		assertEquals(true, lampadaLED.isOn());
 		lampadaLED.off();
-		assertEquals(false, lampadaLED.isOn()); // Testa se off apaga lampada quando está acesa
+		assertEquals(false, lampadaLED.isOn()); 
 		
 		
 	}
@@ -67,14 +67,14 @@ public class InterfaceTest {
 	public void testeSwitch() {
 		assertEquals(false, lampadaFluo.isOn());
 		switchFluo.lightSwitch();
-		assertEquals(true, lampadaFluo.isOn()); // Estava desligada e ficou ligada
+		assertEquals(true, lampadaFluo.isOn()); 
 		switchFluo.lightSwitch();   
-		assertEquals(false, lampadaFluo.isOn()); // Estava ligada e ficou desligada
+		assertEquals(false, lampadaFluo.isOn()); 
 		
 		assertEquals(false, lampadaLED.isOn());
 		switchLED.lightSwitch();
-		assertEquals(true, lampadaLED.isOn()); // Estava desligada e ficou ligada
-		switchLED.lightSwitch();   // Estava ligada e ficou desligada
+		assertEquals(true, lampadaLED.isOn()); 
+		switchLED.lightSwitch();   
 		assertEquals(false, lampadaLED.isOn());
 	}
 
