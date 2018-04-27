@@ -8,10 +8,10 @@ public class Phonebook {
     Contact littleContact;
     int incrementId;
 
-    public void addContact(Contact contact) {
-        myList.add(contact);
+    public boolean addContact(Contact contact) {
+        return myList.add(contact);
     }
-    
+
     public Contact selectData() {
         littleContact = new Contact(ScannerData.ScannerName(), ScannerData.ScannerNumber(), ScannerData.ScannerEmail());
         try {

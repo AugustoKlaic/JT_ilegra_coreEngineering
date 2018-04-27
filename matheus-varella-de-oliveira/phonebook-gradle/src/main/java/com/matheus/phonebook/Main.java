@@ -7,6 +7,5 @@ public class Main {
         System.out.println("Bem vindo");
         Menu menu = new Menu();
         menu.menu();
-
     }
 }
