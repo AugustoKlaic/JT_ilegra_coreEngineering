@@ -22,7 +22,7 @@ public class ThreadParImpar implements Runnable {
 				randomOdd();
 			} else if (threadID == 2) {
 				randomEven();
-			}
+			} 
 		}
 	}
 
