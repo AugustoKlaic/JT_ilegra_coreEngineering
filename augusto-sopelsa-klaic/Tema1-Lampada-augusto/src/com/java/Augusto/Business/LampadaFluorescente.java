@@ -30,4 +30,5 @@ public class LampadaFluorescente implements Lampada{
 		ligada = false;
 		System.out.println("A lampada Fluorescente esta Desligada.");
 	}
+
 }

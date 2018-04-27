@@ -27,4 +27,5 @@ public class Switch{
 	public Lampada getLampada() {
 		return lampada;
 	}
+
 }

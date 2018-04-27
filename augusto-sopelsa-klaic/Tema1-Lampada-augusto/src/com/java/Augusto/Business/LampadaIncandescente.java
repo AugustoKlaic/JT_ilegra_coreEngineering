@@ -29,4 +29,5 @@ public class LampadaIncandescente implements Lampada{
 		ligada = false;
 		System.out.println("A lampada Incandescente esta Desligada.");
 	}
+
 }
