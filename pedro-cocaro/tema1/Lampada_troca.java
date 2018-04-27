@@ -3,11 +3,11 @@ package com.java.cocaro.tema1;
 public class Lampadatroca {
 	private Lampada lampada;
 	
-	public Lampadatroca(Lampada changes) {
+	public lampadatroca(Lampada changes) {
 		this.lampada = changes;
 	}
 	
-	public void SwitchOnOff() {
+	public void switchOnOff() {
 		if(lampada.getLigada()) {
 			lampada.off();
 		}
