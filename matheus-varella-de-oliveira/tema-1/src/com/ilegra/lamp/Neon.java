@@ -18,4 +18,7 @@ public class Neon implements Lamp {
         return status;
     }
 
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 }
