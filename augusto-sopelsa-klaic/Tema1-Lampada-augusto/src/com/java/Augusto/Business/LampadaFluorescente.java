@@ -8,7 +8,7 @@ public class LampadaFluorescente implements Lampada{
 		super();
 		ligada = false;
 	}
-	
+	 
 	public LampadaFluorescente(boolean x) {
 		super();
 		this.ligada = x;

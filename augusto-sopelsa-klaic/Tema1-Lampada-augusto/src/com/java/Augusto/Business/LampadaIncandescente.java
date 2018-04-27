@@ -8,7 +8,7 @@ public class LampadaIncandescente implements Lampada{
 		ligada = false;
 	}
 	
-	public LampadaIncandescente(boolean x) {
+	public LampadaIncandescente(boolean x) { 
 		super();
 		this.ligada = x;
 	}

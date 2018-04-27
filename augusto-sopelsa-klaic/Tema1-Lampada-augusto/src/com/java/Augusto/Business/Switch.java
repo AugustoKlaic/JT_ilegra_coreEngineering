@@ -7,7 +7,7 @@ public class Switch{
 		
 	}
 	
-	public Switch(Lampada lampada) {
+	public Switch(Lampada lampada) { 
 		this.lampada = lampada;
 	}
 	
