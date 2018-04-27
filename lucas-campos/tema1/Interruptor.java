@@ -8,7 +8,7 @@ public class Interruptor {
 		 
 	}
 	
-	public void  Switch() {
+	public void  lightswitch() {
 	if (lampada.isStatus())
 		lampada.off();
 		else
