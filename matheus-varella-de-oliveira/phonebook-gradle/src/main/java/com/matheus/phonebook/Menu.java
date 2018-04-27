@@ -46,6 +46,9 @@ public class Menu {
                 break;
 
             default:
+                System.out.println("Opção inválida");
+                menu();
+                break;
                 // The user input an unexpected choice.
         }
     }
