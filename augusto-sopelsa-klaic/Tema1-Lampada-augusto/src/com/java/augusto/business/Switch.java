@@ -14,7 +14,7 @@ public class Switch{
 	public void SwitchOnOff() {
 		if(lampada.getLigada() == true) {
 			lampada.off();
-		}
+		} 
 		else if(lampada.getLigada() == false) {
 			lampada.on();
 		}

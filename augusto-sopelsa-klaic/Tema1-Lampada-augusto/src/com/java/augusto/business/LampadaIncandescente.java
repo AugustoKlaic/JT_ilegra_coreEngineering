@@ -13,7 +13,7 @@ public class LampadaIncandescente implements Lampada{
 		this.ligada = ligada;
 	}
 	
-	@Override
+	@Override 
 	public boolean getLigada() {
 		return ligada;
 	}

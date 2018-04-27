@@ -11,7 +11,7 @@ public class LampadaFluorescente implements Lampada{
 	
 	public LampadaFluorescente(boolean ligada) {
 		super();
-		this.ligada = ligada;
+		this.ligada = ligada; 
 	}
 	
 	@Override
