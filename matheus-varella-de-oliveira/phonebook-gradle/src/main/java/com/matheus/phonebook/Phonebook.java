@@ -63,7 +63,7 @@ public class Phonebook {
     }
 
 
-    public void findContactByname(String name) {
+    public void findContactByName(String name) {
         for (int i = 0; i < myList.size(); i++) {
             if (myList.get(i).getName().contains(name)) {
                 System.out.println("achou contato por nome!!!!------");
