@@ -17,4 +17,14 @@ public class Phonebook {
         return littleContact;
     }
 
+    public void listContacts() {
+        System.out.println("zzzzza");
+        for (int i = 0; i < myList.size(); i++) {
+            System.out.println("aaa");
+            System.out.print(myList.get(i).getPhonenumber());
+            System.out.print(myList.get(i).getName());
+            System.out.print(myList.get(i).getEmail());
+        }
+
+    }
 }
