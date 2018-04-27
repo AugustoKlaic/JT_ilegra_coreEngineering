@@ -7,5 +7,7 @@ public class Phonebook {
     public void addContact(Contact contact) {
         myList.add(contact);
         System.out.println(myList.get(0).getEmail());
+        System.out.println(myList.get(0).getName());
+        System.out.println(myList.get(0).getPhonenumber());
     }
 }
