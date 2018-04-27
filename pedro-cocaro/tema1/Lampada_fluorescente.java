@@ -1,7 +1,7 @@
 package com.java.cocaro.tema1;
 
 
-public class Lampadafluorescente implements Lampada {
+public class LampadaFluorescente implements Lampada {
 	
 	private boolean ligada = false;
 	
