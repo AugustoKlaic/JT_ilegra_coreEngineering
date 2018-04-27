@@ -8,9 +8,9 @@ public class LampadaIncandescente implements Lampada{
 		ligada = false;
 	}
 	
-	public LampadaIncandescente(boolean x) {
+	public LampadaIncandescente(boolean ligada) {
 		super();
-		this.ligada = x;
+		this.ligada = ligada;
 	}
 	
 	@Override

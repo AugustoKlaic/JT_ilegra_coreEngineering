@@ -20,8 +20,8 @@ public class Switch{
 		}
 	}
 	
-	public void setSwitch(Lampada l) {
-		lampada = l;
+	public void setSwitch(Lampada lampada) {
+		this.lampada = lampada;
 	}
 	
 	public Lampada getLampada() {
