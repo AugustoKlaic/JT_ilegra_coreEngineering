@@ -39,6 +39,10 @@ public class Menu {
                 menu();
                 break;
 
+            case 5: //find contact by name
+                phonebook.findContactById(ScannerData.ScannerId());
+                menu();
+                break;
 
             default:
                 // The user input an unexpected choice.
