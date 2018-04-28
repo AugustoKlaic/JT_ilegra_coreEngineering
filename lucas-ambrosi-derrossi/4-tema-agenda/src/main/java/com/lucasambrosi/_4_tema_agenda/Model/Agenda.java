@@ -2,10 +2,11 @@ package com.lucasambrosi._4_tema_agenda.Model;
 
 import com.lucasambrosi._4_tema_agenda.Classes.Person;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Agenda implements AgendaBase {
 
-    ArrayList<Person> agendaList = new ArrayList<>();
+    private List<Person> agendaList = new ArrayList<>();
 
     @Override
     public boolean addContact(Person person) {
@@ -22,26 +23,24 @@ public class Agenda implements AgendaBase {
     }
 
     @Override
-    public ArrayList<Person> listPeople() {
+    public List<Person> listPeople() {
         return agendaList;
     }
 
     @Override
-    public ArrayList<Person> findByName(String name) {
+    public List<Person> findByName(String name) {
+
+        List<Person> returnList = new ArrayList<>();
 
         if(!name.trim().equals("")){
-
-            ArrayList<Person> returnList = new ArrayList<>();
-
             for(Person person : agendaList){
                 String[] firstName = person.getName().toLowerCase().split(" ");
                 if(firstName[0].contains(name.toLowerCase())){
                     returnList.add(person);
-                    return returnList;
                 }
             }
         }
-        return null;
+        return returnList;
     }
 
     @Override

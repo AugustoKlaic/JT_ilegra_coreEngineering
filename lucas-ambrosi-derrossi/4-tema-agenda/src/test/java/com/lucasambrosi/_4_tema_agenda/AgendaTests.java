@@ -1,7 +1,6 @@
 package com.lucasambrosi._4_tema_agenda;
 
 import com.lucasambrosi._4_tema_agenda.Classes.Person;
-import com.lucasambrosi._4_tema_agenda.Controller.Controller;
 import com.lucasambrosi._4_tema_agenda.Model.Agenda;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,6 +47,7 @@ public class AgendaTests {
         assertEquals(true, agenda.addContact(person));
         assertEquals(true, agenda.addContact(person2));
         assertEquals("teste2@gmail.com", agenda.findByName("Teste2").get(0).getEmail());
+        assertEquals(true, agenda.findByName("contatoInexistente").isEmpty());
     }
 
     @Test

@@ -4,8 +4,7 @@ import com.lucasambrosi._4_tema_agenda.Classes.Person;
 import com.lucasambrosi._4_tema_agenda.Classes.Printer;
 import com.lucasambrosi._4_tema_agenda.Classes.Reader;
 import com.lucasambrosi._4_tema_agenda.Model.Agenda;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
 
@@ -48,13 +47,13 @@ public class Controller {
     }
 
     public void list(){
-        ArrayList<Person> list = agenda.listPeople();
+        List<Person> list = agenda.listPeople();
         Printer.printListPeople(list);
     }
 
     public void listSearchByName(){
-        ArrayList<Person> listByName = agenda.findByName(Reader.readName());
-        if(listByName != null)
+        List<Person> listByName = agenda.findByName(Reader.readName());
+        if(!listByName.isEmpty())
             Printer.printListPeople(listByName);
         else
             System.out.println("Contact not find.");

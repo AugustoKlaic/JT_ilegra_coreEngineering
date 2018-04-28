@@ -1,6 +1,6 @@
 package com.lucasambrosi._4_tema_agenda.Classes;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Printer {
 
@@ -8,7 +8,7 @@ public class Printer {
         System.out.println(person.toString());
     }
 
-    public static void printListPeople(ArrayList<Person> list) {
+    public static void printListPeople(List<Person> list) {
         if (list.isEmpty()){
             System.out.println("Lista vazia.");
         } else {
@@ -16,6 +16,5 @@ public class Printer {
                 Printer.printPerson(person);
             }
         }
-
     }
 }
