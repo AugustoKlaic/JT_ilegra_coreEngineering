@@ -1,0 +1,10 @@
+/.project
+/.classpath
+.metadata
+/bin
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.recommenders

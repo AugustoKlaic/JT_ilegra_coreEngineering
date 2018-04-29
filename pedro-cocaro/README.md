@@ -1,1 +1,1 @@
-Pedro Gomes Cócaro
+Pedro CÃ³caro
