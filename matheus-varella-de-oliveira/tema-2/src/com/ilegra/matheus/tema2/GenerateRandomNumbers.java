@@ -7,7 +7,7 @@ import java.util.Random;
 public class GenerateRandomNumbers {
     int randomNumber;
 
-    private boolean generateNumber() { //par
+    private boolean generateNumber() {
         Random randomGenerator = new Random();
         randomNumber = randomGenerator.nextInt(100);
         return parity(randomNumber);
