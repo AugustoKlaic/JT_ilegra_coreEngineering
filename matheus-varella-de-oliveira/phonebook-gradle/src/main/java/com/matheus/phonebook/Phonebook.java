@@ -10,13 +10,14 @@ public class Phonebook {
         return myList.add(contact);
     }
 
+
     public Contact selectData() {
         Contact contact;
         int incrementId;
         contact = new Contact(
-                ScannerData.ScannerName(),
-                ScannerData.ScannerNumber(),
-                ScannerData.ScannerEmail());
+                ScannerData.scannerName(),
+                ScannerData.scannerNumber(),
+                ScannerData.scannerEmail());
         try {
             incrementId = myList.get(myList.size() - 1).getId();
             contact.setId(++incrementId);
@@ -53,4 +54,3 @@ public class Phonebook {
         return foundContactList;
     }
 }
-//fazer construtor e retornar objeto em todos esses metodos pra um metodo print com override p lista, Contato ou qqr outra coisa q possa ter sido retornado daqui

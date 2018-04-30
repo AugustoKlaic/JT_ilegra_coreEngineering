@@ -20,37 +20,31 @@ public class Menu {
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case 1: //add contato
+            case 1:
                 Contact contact = phonebook.selectData();
                 phonebook.addContact(contact);
-
                 menu();
                 break;
-            case 2: //list contacts
+            case 2:
                 printer.printer(phonebook.listContacts());
                 menu();
                 break;
-
-            case 3: //remove contact by id
-                phonebook.removeContactById(phonebook.findContactById(scannerData.ScannerId()).getId());
+            case 3:
+                phonebook.removeContactById(phonebook.findContactById(scannerData.scannerId()).getId());
                 menu();
                 break;
-
-            case 4: //find contact by id
-                printer.printer(phonebook.findContactById(ScannerData.ScannerId()));
+            case 4:
+                printer.printer(phonebook.findContactById(ScannerData.scannerId()));
                 menu();
                 break;
-
-            case 5: //find contact by name
-                printer.printer(phonebook.findContactByName(ScannerData.ScannerName()));
+            case 5:
+                printer.printer(phonebook.findContactByName(ScannerData.scannerName()));
                 menu();
                 break;
-
             default:
                 System.out.println("Opção inválida");
                 menu();
                 break;
-                // The user input an unexpected choice.
         }
     }
 }
