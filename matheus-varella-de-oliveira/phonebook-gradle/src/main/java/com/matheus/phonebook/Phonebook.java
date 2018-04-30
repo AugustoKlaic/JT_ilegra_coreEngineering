@@ -11,16 +11,18 @@ public class Phonebook {
     }
 
     public Contact selectData() {
-        Contact littleContact;
-        littleContact = new Contact(ScannerData.ScannerName(), ScannerData.ScannerNumber(), ScannerData.ScannerEmail());
+        Contact contact;
         int incrementId;
+        contact = new Contact(
+                ScannerData.ScannerName(),
+                ScannerData.ScannerNumber(),
+                ScannerData.ScannerEmail());
         try {
             incrementId = myList.get(myList.size() - 1).getId();
             System.out.println(incrementId);
-            littleContact.setId(++incrementId);
-        } catch (IndexOutOfBoundsException ex) {
-        }
-        return littleContact;
+            contact.setId(++incrementId);
+        } catch (IndexOutOfBoundsException ex) { }
+        return contact;
     }
 
     public void listContacts() {
