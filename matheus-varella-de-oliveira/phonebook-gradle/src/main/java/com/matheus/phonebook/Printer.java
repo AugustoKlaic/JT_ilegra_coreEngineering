@@ -11,9 +11,11 @@ public class Printer {
     }
 
     public void listContactsPrinter(ArrayList<Contact> myList) {
+        System.out.println("Lista de contatos:");
         for (int i = 0; i < myList.size(); i++) {
-            System.out.println("Lista de contatos:");
             printerContact(myList.get(i));
         }
     }
+
+
 }

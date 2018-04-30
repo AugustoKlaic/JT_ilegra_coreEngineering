@@ -28,7 +28,6 @@ public class Menu {
                 break;
             case 2: //list contacts
                 printer.listContactsPrinter(phonebook.listContacts());
-//                phonebook.listContacts();
                 menu();
                 break;
 

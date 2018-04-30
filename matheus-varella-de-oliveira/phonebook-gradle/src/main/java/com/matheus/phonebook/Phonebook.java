@@ -27,13 +27,6 @@ public class Phonebook {
     public ArrayList<Contact> listContacts() {
         System.out.println("Quantidade  de contatos na lista:" + myList.size());
         return myList;
-//        for (int i = 0; i < myList.size(); i++) {
-//            System.out.println("Lista de contatos:");
-//            System.out.println(myList.get(i).getPhonenumber());
-//            System.out.println(myList.get(i).getName());
-//            System.out.println(myList.get(i).getEmail());
-//            System.out.println(myList.get(i).getId());
-//        }
     }
 
     public void removeContactById(int id) {
