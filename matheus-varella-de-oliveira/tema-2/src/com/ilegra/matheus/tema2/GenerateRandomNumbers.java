@@ -5,16 +5,16 @@ import java.util.Random;
 
 
 public class GenerateRandomNumbers {
-    int randomNumber;
 
     private int generateNumber() {
+        int randomNumber;
         Random randomGenerator = new Random();
         randomNumber = randomGenerator.nextInt(100);
         return randomNumber;
     }
 
     public int generateOddNumber() {
-        generateNumber();
+        int randomNumber = generateNumber();
         if (parity(randomNumber)) {
             System.out.println(randomNumber);
         } else {
@@ -24,6 +24,7 @@ public class GenerateRandomNumbers {
     }
 
     public int generateEvenNumber() {
+        int randomNumber = generateNumber();
         generateNumber();
         if (parity(randomNumber)) {
             System.out.println(++randomNumber);
