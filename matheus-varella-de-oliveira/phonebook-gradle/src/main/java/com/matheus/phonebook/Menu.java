@@ -6,6 +6,7 @@ public class Menu {
 
     ScannerData scannerData = new ScannerData();
     Phonebook phonebook = new Phonebook();
+    Printer printer = new Printer();
 
     public void menu() {
         System.out.println("Menu:");
@@ -26,7 +27,8 @@ public class Menu {
                 menu();
                 break;
             case 2: //list contacts
-                phonebook.listContacts();
+                printer.listContactsPrinter(phonebook.listContacts());
+//                phonebook.listContacts();
                 menu();
                 break;
 

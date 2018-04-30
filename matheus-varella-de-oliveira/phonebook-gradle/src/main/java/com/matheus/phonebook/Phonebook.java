@@ -19,21 +19,21 @@ public class Phonebook {
                 ScannerData.ScannerEmail());
         try {
             incrementId = myList.get(myList.size() - 1).getId();
-            System.out.println(incrementId);
             contact.setId(++incrementId);
         } catch (IndexOutOfBoundsException ex) { }
         return contact;
     }
 
-    public void listContacts() {
+    public ArrayList<Contact> listContacts() {
         System.out.println("Quantidade  de contatos na lista:" + myList.size());
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.println("Lista de contatos:");
-            System.out.println(myList.get(i).getPhonenumber());
-            System.out.println(myList.get(i).getName());
-            System.out.println(myList.get(i).getEmail());
-            System.out.println(myList.get(i).getId());
-        }
+        return myList;
+//        for (int i = 0; i < myList.size(); i++) {
+//            System.out.println("Lista de contatos:");
+//            System.out.println(myList.get(i).getPhonenumber());
+//            System.out.println(myList.get(i).getName());
+//            System.out.println(myList.get(i).getEmail());
+//            System.out.println(myList.get(i).getId());
+//        }
     }
 
     public void removeContactById(int id) {
