@@ -37,16 +37,10 @@ public class Agenda {
 	}
 
 	public Pessoa buscaContatoPorId(int idPessoa) {
-
-		Pessoa pessoaAux = null;
-
-		for (Pessoa p : pessoas) {
-			int aux = p.getId();
-			if (idPessoa == aux) {
-				pessoaAux = p;
-				break;
-			}
-		}
-		return pessoaAux;
+		for (Pessoa pessoa : pessoas)
+			if (idPessoa == pessoa.getId())
+				return pessoa;
+				
+		return null;
 	}
 }
