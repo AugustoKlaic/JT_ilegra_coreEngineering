@@ -9,9 +9,9 @@ public class LampadaFluorescente implements Lampada{
 		ligada = false;
 	}
 	
-	public LampadaFluorescente(boolean x) {
+	public LampadaFluorescente(boolean lampada) {
 		super();
-		this.ligada = x;
+		this.ligada = lampada;
 	}
 	
 	@Override
