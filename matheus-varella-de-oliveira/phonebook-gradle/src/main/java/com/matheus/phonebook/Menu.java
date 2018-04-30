@@ -27,7 +27,7 @@ public class Menu {
                 menu();
                 break;
             case 2: //list contacts
-                printer.listContactsPrinter(phonebook.listContacts());
+                printer.printer(phonebook.listContacts());
                 menu();
                 break;
 
@@ -37,12 +37,12 @@ public class Menu {
                 break;
 
             case 4: //find contact by id
-                phonebook.findContactById(ScannerData.ScannerId());
+                printer.printer(phonebook.findContactById(ScannerData.ScannerId()));
                 menu();
                 break;
 
             case 5: //find contact by name
-                printer.listContactsPrinter(phonebook.findContactByName(ScannerData.ScannerName()));
+                printer.printer(phonebook.findContactByName(ScannerData.ScannerName()));
                 menu();
                 break;
 

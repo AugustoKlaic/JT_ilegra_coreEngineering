@@ -37,7 +37,6 @@ public class Phonebook {
     public Contact findContactById(int id) {
         for (Contact contact : myList) {
             if (Objects.equals(contact.getId(), id)) {
-                System.out.println("acho lolo");
                 return contact;
             }
         }
@@ -48,7 +47,6 @@ public class Phonebook {
         ArrayList<Contact> foundContactList = new ArrayList<>();
         for (Contact contact : myList) {
             if (contact.getName().contains(name)) {
-                System.out.println("acho lolo");
                 foundContactList.add(contact);
             }
         }

@@ -19,7 +19,7 @@ public class ScannerData {
 
     public static String ScannerName() {
         Scanner reader = new java.util.Scanner(System.in);
-        System.out.println("Insira seu name");
+        System.out.println("Insira seu nome");
         String name = reader.next();
         return name;
     }
