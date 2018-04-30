@@ -20,7 +20,8 @@ public class Phonebook {
         try {
             incrementId = myList.get(myList.size() - 1).getId();
             contact.setId(++incrementId);
-        } catch (IndexOutOfBoundsException ex) { }
+        } catch (IndexOutOfBoundsException ex) {
+        }
         return contact;
     }
 
@@ -48,19 +49,15 @@ public class Phonebook {
     }
 
 
-    public String findContactByName(String name) {
-        String nameContactFound = null;
-        for (int i = 0; i < myList.size(); i++) {
-            if (myList.get(i).getName().contains(name)) {
-                System.out.println("Contato encontrado por name");
-                System.out.println(myList.get(i).getPhonenumber());
-                System.out.println(myList.get(i).getName());
-                System.out.println(myList.get(i).getEmail());
-                System.out.println(myList.get(i).getId());
-                nameContactFound = myList.get(i).getName();
+    public ArrayList<Contact> findContactByName(String name) {
+        ArrayList<Contact> foundContactList = new ArrayList<>();
+        for (Contact contact : myList) {
+            if (contact.getName().contains(name)) {
+                System.out.println("acho lolo");
+                foundContactList.add(contact);
             }
         }
-        return nameContactFound;
+        return foundContactList;
     }
 }
 //fazer construtor e retornar objeto em todos esses metodos pra um metodo print com override p lista, Contato ou qqr outra coisa q possa ter sido retornado daqui

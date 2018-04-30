@@ -42,7 +42,8 @@ public class Menu {
                 break;
 
             case 5: //find contact by name
-                phonebook.findContactByName(ScannerData.ScannerName());
+                printer.listContactsPrinter(phonebook.findContactByName(ScannerData.ScannerName()));
+//                phonebook.findContactByName(ScannerData.ScannerName());
                 menu();
                 break;
 
