@@ -10,12 +10,12 @@ public class Menu {
 
     public void menu() {
         System.out.println("Menu:");
-        System.out.println("Para adicionar contato digite 1 e pressione enter");
-        System.out.println("Para listar todos os contatos digite 2 e pressione enter");
-        System.out.println("Para remove um contato digite 3 e pressione enter");
-        System.out.println("Para encontrar um contato por iD digite 4 e pressione enter");
-        System.out.println("Para encontrar um contato por nome digite 5 e pressione enter");
-
+        System.out.println("1 - Para adicionar contato");
+        System.out.println("2 - Para listar todos os contatos");
+        System.out.println("3 - Para remover um contato pelo ID");
+        System.out.println("4 - Para encontrar um contato pelo ID");
+        System.out.println("5 - Para encontrar um por nome");
+        System.out.println("Digite a opção desejada e pressione ENTER");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
 

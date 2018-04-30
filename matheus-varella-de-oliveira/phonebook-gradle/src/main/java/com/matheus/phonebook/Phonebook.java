@@ -41,10 +41,8 @@ public class Phonebook {
                 return contact;
             }
         }
-
         return null;
     }
-
 
     public ArrayList<Contact> findContactByName(String name) {
         ArrayList<Contact> foundContactList = new ArrayList<>();
