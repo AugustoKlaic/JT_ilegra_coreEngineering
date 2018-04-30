@@ -29,14 +29,8 @@ public class Phonebook {
         return myList;
     }
 
-    public void removeContactById(int id) {
-        for (int i = 0; i < myList.size(); i++) {
-            if (Objects.equals(myList.get(i).getId(), id)) {
-                myList.remove(i);
-            }
-            Contact contact = myList.get(myList.size() - 1);
-            System.out.println(contact.getId());
-        }
+    public Contact removeContactById(int id) {
+        return myList.remove(id);
     }
 
     public int findContactById(int id) {

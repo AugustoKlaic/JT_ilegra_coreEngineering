@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Printer {
     public void printerContact(Contact contact) {
-        System.out.println(contact.getPhonenumber());
-        System.out.println(contact.getName());
-        System.out.println(contact.getEmail());
-        System.out.println(contact.getId());
+        System.out.println("Numero do contato: " + contact.getPhonenumber());
+        System.out.println("Nome do contato: " + contact.getName());
+        System.out.println("Email do contato: " + contact.getEmail());
+        System.out.println("ID do contato: " + contact.getId());
     }
 
     public void listContactsPrinter(ArrayList<Contact> myList) {
