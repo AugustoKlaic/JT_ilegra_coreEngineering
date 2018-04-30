@@ -32,7 +32,7 @@ public class Menu {
                 break;
 
             case 3: //remove contact by id
-                phonebook.removeContactById(phonebook.findContactById(scannerData.ScannerId()));
+                phonebook.removeContactById(phonebook.findContactById(scannerData.ScannerId()).getId());
                 menu();
                 break;
 

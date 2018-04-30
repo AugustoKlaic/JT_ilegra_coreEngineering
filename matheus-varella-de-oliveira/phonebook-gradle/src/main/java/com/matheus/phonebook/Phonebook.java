@@ -34,18 +34,27 @@ public class Phonebook {
         return myList.remove(id);
     }
 
-    public int findContactById(int id) {
-        for (int i = 0; i < myList.size(); i++) {
-            if (Objects.equals(myList.get(i).getId(), id)) {
-                System.out.println("Voce procurou pelo ID: " + myList.get(i).getId());
-                System.out.println("Contato encontrado:");
-                System.out.println(myList.get(i).getPhonenumber());
-                System.out.println(myList.get(i).getName());
-                System.out.println(myList.get(i).getEmail());
-                System.out.println(myList.get(i).getId());
+    public Contact findContactById(int id) {
+        for (Contact contact : myList) {
+            if (Objects.equals(contact.getId(), id)) {
+                System.out.println("acho lolo");
+                return contact;
             }
         }
-        return myList.get(id).getId();
+//        for (int i = 0; i < myList.size(); i++) {
+//            if (Objects.equals(myList.get(i).getId(), id)) {
+//                return myList.get(i);
+//
+//
+//                System.out.println("Voce procurou pelo ID: " + myList.get(i).getId());
+//                System.out.println("Contato encontrado:");
+//                System.out.println(myList.get(i).getPhonenumber());
+//                System.out.println(myList.get(i).getName());
+//                System.out.println(myList.get(i).getEmail());
+//                System.out.println(myList.get(i).getId());
+//            }
+//        }
+        return null;
     }
 
 
