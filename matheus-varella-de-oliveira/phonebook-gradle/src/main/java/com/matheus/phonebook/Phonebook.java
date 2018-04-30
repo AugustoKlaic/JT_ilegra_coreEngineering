@@ -41,19 +41,7 @@ public class Phonebook {
                 return contact;
             }
         }
-//        for (int i = 0; i < myList.size(); i++) {
-//            if (Objects.equals(myList.get(i).getId(), id)) {
-//                return myList.get(i);
-//
-//
-//                System.out.println("Voce procurou pelo ID: " + myList.get(i).getId());
-//                System.out.println("Contato encontrado:");
-//                System.out.println(myList.get(i).getPhonenumber());
-//                System.out.println(myList.get(i).getName());
-//                System.out.println(myList.get(i).getEmail());
-//                System.out.println(myList.get(i).getId());
-//            }
-//        }
+
         return null;
     }
 
