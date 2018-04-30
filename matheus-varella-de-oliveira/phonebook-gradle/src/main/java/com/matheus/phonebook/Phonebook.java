@@ -5,15 +5,15 @@ import java.util.Objects;
 
 public class Phonebook {
     ArrayList<Contact> myList = new ArrayList<Contact>();
-    Contact littleContact;
-    int incrementId;
 
     public boolean addContact(Contact contact) {
         return myList.add(contact);
     }
 
     public Contact selectData() {
+        Contact littleContact;
         littleContact = new Contact(ScannerData.ScannerName(), ScannerData.ScannerNumber(), ScannerData.ScannerEmail());
+        int incrementId;
         try {
             incrementId = myList.get(myList.size() - 1).getId();
             System.out.println(incrementId);
