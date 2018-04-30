@@ -18,7 +18,8 @@ public class Phonebook {
             incrementId = myList.get(myList.size() - 1).getId();
             System.out.println(incrementId);
             littleContact.setId(++incrementId);
-        } catch (IndexOutOfBoundsException ex) { }
+        } catch (IndexOutOfBoundsException ex) {
+        }
         return littleContact;
     }
 
@@ -43,22 +44,23 @@ public class Phonebook {
         }
     }
 
-    public void findContactById(int id) {
+    public int findContactById(int id) {
         for (int i = 0; i < myList.size(); i++) {
             if (Objects.equals(myList.get(i).getId(), id)) {
-                System.out.println("Contato encontrado por ID");
+                System.out.println("Voce procurou pelo ID: " + myList.get(i).getId());
+                System.out.println("Contato encontrado:");
                 System.out.println(myList.get(i).getPhonenumber());
                 System.out.println(myList.get(i).getName());
                 System.out.println(myList.get(i).getEmail());
                 System.out.println(myList.get(i).getId());
             }
-            Contact contact = myList.get(myList.size() - 1);
-            System.out.println(contact.getId());
         }
+        return myList.get(id).getId();
     }
 
 
-    public void findContactByName(String name) {
+    public String findContactByName(String name) {
+        String nameContactFound = null;
         for (int i = 0; i < myList.size(); i++) {
             if (myList.get(i).getName().contains(name)) {
                 System.out.println("Contato encontrado por name");
@@ -66,8 +68,10 @@ public class Phonebook {
                 System.out.println(myList.get(i).getName());
                 System.out.println(myList.get(i).getEmail());
                 System.out.println(myList.get(i).getId());
+                nameContactFound = myList.get(i).getName();
             }
         }
-//fazer construtor e retornar objeto em todos esses metodos pra um metodo print com override p lista, ou qqr outra coisa q possa ter sido retornado daqui
+        return nameContactFound;
     }
 }
+//fazer construtor e retornar objeto em todos esses metodos pra um metodo print com override p lista, Contato ou qqr outra coisa q possa ter sido retornado daqui

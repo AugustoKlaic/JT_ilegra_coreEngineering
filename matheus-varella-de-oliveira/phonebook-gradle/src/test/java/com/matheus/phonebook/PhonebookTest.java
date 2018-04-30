@@ -25,6 +25,33 @@ public class PhonebookTest {
         assertTrue(phonebookTest.addContact(contactTest));
     }
 
+    @Test
+    public void removeContactByIdTest() {
+        Phonebook phonebookNotModified = new Phonebook();
+        phonebookNotModified.addContact(contactTest);
+
+        phonebookTest.addContact(contactTest);
+        phonebookTest.addContact(contactTest);
+        phonebookTest.removeContactById(contactTest.getId());
+
+        assertSame(phonebookTest.myList.size(), phonebookNotModified.myList.size());
+    }
+
+    @Test
+    public void findContactByIdTest() {
+        phonebookTest.addContact(contactTest);
+        int idContact = contactTest.getId();
+        int idContactRemoved = phonebookTest.findContactById(contactTest.getId());
+        assertEquals(idContact, idContactRemoved);
+    }
+
+    @Test
+    public void findContactByNameTest() {
+        phonebookTest.addContact(contactTest);
+        String nameContact = contactTest.getName();
+        String nameContactFound = phonebookTest.findContactByName(nameContact);
+        assertEquals(nameContact, nameContactFound);
+    }
 }
 /*Como testar que o método addContact realmente add contact
 1 - mostrar q apos a chamada do metodo a lista muda
