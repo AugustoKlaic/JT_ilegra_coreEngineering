@@ -7,14 +7,15 @@ import java.util.Random;
 public class GenerateRandomNumbers {
     int randomNumber;
 
-    private boolean generateNumber() {
+    private int generateNumber() {
         Random randomGenerator = new Random();
         randomNumber = randomGenerator.nextInt(100);
-        return parity(randomNumber);
+        return randomNumber;
     }
 
     public int generateOddNumber() {
-        if (generateNumber()) {
+        generateNumber();
+        if (parity(randomNumber)) {
             System.out.println(randomNumber);
         } else {
             System.out.println(++randomNumber);
@@ -23,7 +24,8 @@ public class GenerateRandomNumbers {
     }
 
     public int generateEvenNumber() {
-        if (generateNumber()) {
+        generateNumber();
+        if (parity(randomNumber)) {
             System.out.println(++randomNumber);
         } else {
             System.out.println(randomNumber);
