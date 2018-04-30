@@ -43,7 +43,6 @@ public class Menu {
 
             case 5: //find contact by name
                 printer.listContactsPrinter(phonebook.findContactByName(ScannerData.ScannerName()));
-//                phonebook.findContactByName(ScannerData.ScannerName());
                 menu();
                 break;
 
