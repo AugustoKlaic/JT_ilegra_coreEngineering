@@ -1,8 +1,9 @@
-package com.java.augusto.teste;
+package com.java.augusto.testeagenda;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +56,7 @@ public class AgendaTeste {
 
 	@Test
 	public void testeBuscaPorNome() {
-		ArrayList<Pessoa> pessoasaux = new ArrayList<Pessoa>();
+		List<Pessoa> pessoasaux = new ArrayList<Pessoa>();
 		
 		System.out.println("Testando busca por nome.");
 		System.out.println("Adiciona 4 pessoas.");

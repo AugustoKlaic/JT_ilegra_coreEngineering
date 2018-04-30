@@ -1,9 +1,10 @@
 package com.java.augusto.business;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Agenda {
-	private ArrayList<Pessoa> pessoas;
+	private List<Pessoa> pessoas;
 
 	public Agenda() {
 		this.pessoas = new ArrayList<Pessoa>();
@@ -18,20 +19,17 @@ public class Agenda {
 		pessoas.remove(buscaContatoPorId(id));
 	}
 
-	public ArrayList<Pessoa> getTodasContatos() {
+	public List<Pessoa> getTodasContatos() {
 		return pessoas;
 	}
 
-	public ArrayList<Pessoa> buscaContatoPorNome(String nomePessoa) {
+	public List<Pessoa> buscaContatoPorNome(String nomePessoa) {
 
-		ArrayList<Pessoa> pessoasAux = new ArrayList<Pessoa>();
+		List<Pessoa> pessoasAux = new ArrayList<>();
 
 		for (Pessoa p : pessoas) {
 			String aux = p.getNome();
-			if (nomePessoa.equals(aux)) {
-				pessoasAux.add(p);
-			}
-			else if(p.getNome().contains(nomePessoa)) {
+			if (nomePessoa.equals(aux) || p.getNome().contains(nomePessoa)) {
 				pessoasAux.add(p);
 			}
 		}
@@ -46,6 +44,7 @@ public class Agenda {
 			int aux = p.getId();
 			if (idPessoa == aux) {
 				pessoaAux = p;
+				break;
 			}
 		}
 		return pessoaAux;
