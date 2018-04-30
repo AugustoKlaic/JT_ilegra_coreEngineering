@@ -1,4 +1,4 @@
-package com.java.cocaro.tema1;
+package com.java.cocaro.lampadatroca;
 
 public interface Lampada {
 public void on ();	

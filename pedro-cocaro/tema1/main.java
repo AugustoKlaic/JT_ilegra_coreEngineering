@@ -1,18 +1,18 @@
-package com.java.cocaro.tema1;
+package com.java.cocaro.lampadatroca;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		
-		Lampadafluorescente branca = new Lampadafluorescente();
-		Lampadatroca interruptor = new Lampadatroca(branca); 
+		Lampada_fluorescente branca = new Lampada_fluorescente();
+		Lampada_troca interruptor = new Lampada_troca(branca); 
 		interruptor.SwitchOnOff();
 		interruptor.SwitchOnOff();
 		interruptor.SwitchOnOff();
 
 
-		Lampadaincandescente azul = new Lampadaincandescente();
-		Lampadatroca interruptor2 = new Lampadatroca(azul); 
+		Lampada_incandescente azul = new Lampada_incandescente();
+		Lampada_troca interruptor2 = new Lampada_troca(azul); 
 		interruptor2.SwitchOnOff();
 		interruptor2.SwitchOnOff();
 		interruptor2.SwitchOnOff();

@@ -1,13 +1,13 @@
-package com.java.cocaro.tema1;
+package com.java.cocaro.lampadatroca;
 
-public class Lampadatroca {
+public class Lampada_troca {
 	private Lampada lampada;
 	
-	public lampadatroca(Lampada changes) {
-		this.lampada = changes;
+	public Lampada_troca(Lampada Switch) {
+		this.lampada = Switch;
 	}
 	
-	public void switchOnOff() {
+	public void SwitchOnOff() {
 		if(lampada.getLigada()) {
 			lampada.off();
 		}
@@ -15,4 +15,5 @@ public class Lampadatroca {
 			lampada.on();
 		}
 	}
+
 }
