@@ -25,7 +25,6 @@ public class PhonebookTest {
         assertTrue(phonebookTest.addContact(contactTest));
     }
 
-
 }
 /*Como testar que o método addContact realmente add contact
 1 - mostrar q apos a chamada do metodo a lista muda
@@ -33,3 +32,13 @@ public class PhonebookTest {
 3 - mostrar q apos a chamada do metodo a lista é diferente de 0
 4 - comparar usuario mock com usuario na list apos a chamada do metodo
  */
+
+/*Como testar o método selectDataTest
+1 - mostrar que apos a chamada do metodo o objetivo retornado nao é nulo
+
+1 - mostrar que apos a chamada do metodo o objetivo retornado tem nome
+1 - mostrar que apos a chamada do metodo o objetivo retornado tem email
+1 - mostrar que apos a chamada do metodo o objetivo retornado tem numero
+1 - mostrar que apos a chamada do metodo o objetivo retornado tem id
+*/
+
