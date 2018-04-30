@@ -41,31 +41,14 @@ public class PhonebookTest {
     public void findContactByIdTest() {
         phonebookTest.addContact(contactTest);
         int idContact = contactTest.getId();
-        int idContactRemoved = phonebookTest.findContactById(contactTest.getId());
-        assertEquals(idContact, idContactRemoved);
+        Contact idContactRemoved = phonebookTest.findContactById(contactTest.getId());
+        assertEquals(idContact, idContactRemoved.getId());
     }
 
     @Test
     public void findContactByNameTest() {
         phonebookTest.addContact(contactTest);
-        String nameContact = contactTest.getName();
-        String nameContactFound = phonebookTest.findContactByName(nameContact);
-        assertEquals(nameContact, nameContactFound);
+        ArrayList<Contact> contactsFounds = phonebookTest.findContactByName(contactTest.getName());
+        assertEquals(contactTest.getName(), contactsFounds.get(0).getName());
     }
 }
-/*Como testar que o método addContact realmente add contact
-1 - mostrar q apos a chamada do metodo a lista muda
-2 - mostrar q apos a chamada do metodo a lista cresce
-3 - mostrar q apos a chamada do metodo a lista é diferente de 0
-4 - comparar usuario mock com usuario na list apos a chamada do metodo
- */
-
-/*Como testar o método selectDataTest
-1 - mostrar que apos a chamada do metodo o objetivo retornado nao é nulo
-
-1 - mostrar que apos a chamada do metodo o objetivo retornado tem nome
-1 - mostrar que apos a chamada do metodo o objetivo retornado tem email
-1 - mostrar que apos a chamada do metodo o objetivo retornado tem numero
-1 - mostrar que apos a chamada do metodo o objetivo retornado tem id
-*/
-
