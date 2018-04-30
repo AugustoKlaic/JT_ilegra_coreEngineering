@@ -1,13 +1,13 @@
 package com.lucasambrosi._4_tema_agenda;
 
-import com.lucasambrosi._4_tema_agenda.Controller.Controller;
+import com.lucasambrosi._4_tema_agenda.controller.AgendaController;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args){
-        Controller controller = new Controller();
+        AgendaController agendaController = new AgendaController();
         int op;
 
         do{
@@ -21,7 +21,7 @@ public class Main {
 
             System.out.print("Choose an option: ");
             op = new Scanner(System.in).nextInt();
-            controller.option(op);
+            agendaController.option(op);
         }while (op != 6);
     }
 }

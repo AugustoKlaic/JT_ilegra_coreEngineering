@@ -1,14 +1,14 @@
-package com.lucasambrosi._4_tema_agenda.Controller;
+package com.lucasambrosi._4_tema_agenda.controller;
 
-import com.lucasambrosi._4_tema_agenda.Classes.Person;
-import com.lucasambrosi._4_tema_agenda.Classes.Printer;
-import com.lucasambrosi._4_tema_agenda.Classes.Reader;
-import com.lucasambrosi._4_tema_agenda.Model.Agenda;
+import com.lucasambrosi._4_tema_agenda.pojo.Person;
+import com.lucasambrosi._4_tema_agenda.io.Printer;
+import com.lucasambrosi._4_tema_agenda.io.Reader;
+import com.lucasambrosi._4_tema_agenda.agenda.ContactAgenda;
 import java.util.List;
 
-public class Controller {
+public class AgendaController {
 
-    private Agenda agenda = new Agenda();
+    private ContactAgenda contactAgenda = new ContactAgenda();
 
     public void option(int op){
         switch (op){
@@ -33,26 +33,26 @@ public class Controller {
     }
 
     public void add(){
-        if(agenda.addContact(Reader.readNewPerson()))
+        if(contactAgenda.addContact(Reader.readNewPerson()))
             System.out.println("Contact registered!");
         else
             System.out.println("Fail in register.");
     }
 
     public void remove(){
-        if(agenda.removeContact(Reader.readId()))
+        if(contactAgenda.removeContact(Reader.readId()))
             System.out.println("Contact removed!");
         else
             System.out.println("Fail on remove.");
     }
 
     public void list(){
-        List<Person> list = agenda.listPeople();
+        List<Person> list = contactAgenda.listPeople();
         Printer.printListPeople(list);
     }
 
     public void listSearchByName(){
-        List<Person> listByName = agenda.findByName(Reader.readName());
+        List<Person> listByName = contactAgenda.findByName(Reader.readName());
         if(!listByName.isEmpty())
             Printer.printListPeople(listByName);
         else
@@ -60,7 +60,7 @@ public class Controller {
     }
 
     public void listSearchById(){
-        Person person = agenda.findById(Reader.readId());
+        Person person = contactAgenda.findById(Reader.readId());
         if(person != null)
             Printer.printPerson(person);
         else

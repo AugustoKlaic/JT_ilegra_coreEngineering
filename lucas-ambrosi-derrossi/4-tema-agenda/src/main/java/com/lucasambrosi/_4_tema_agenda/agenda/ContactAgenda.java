@@ -1,19 +1,17 @@
-package com.lucasambrosi._4_tema_agenda.Model;
+package com.lucasambrosi._4_tema_agenda.agenda;
 
-import com.lucasambrosi._4_tema_agenda.Classes.Person;
+import com.lucasambrosi._4_tema_agenda.pojo.Person;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Agenda implements AgendaBase {
+public class ContactAgenda {
 
     private List<Person> agendaList = new ArrayList<>();
 
-    @Override
     public boolean addContact(Person person) {
         return agendaList.add(person);
     }
 
-    @Override
     public boolean removeContact(int id) {
         if(!agendaList.isEmpty() && id >= 0){
             Person deletePerson = findById(id);
@@ -22,12 +20,10 @@ public class Agenda implements AgendaBase {
         return false;
     }
 
-    @Override
     public List<Person> listPeople() {
         return agendaList;
     }
 
-    @Override
     public List<Person> findByName(String name) {
 
         List<Person> returnList = new ArrayList<>();
@@ -43,7 +39,6 @@ public class Agenda implements AgendaBase {
         return returnList;
     }
 
-    @Override
     public Person findById(int id) {
 
         if(!agendaList.isEmpty())

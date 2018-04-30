@@ -1,8 +1,10 @@
-package com.lucasambrosi._4_tema_agenda.Classes;
+package com.lucasambrosi._4_tema_agenda.pojo;
 
 public class Person {
 
-    private String name, email, phone;
+    private String name;
+    private String email;
+    private String phone;
     private int id;
 
     public Person(int id, String name, String email, String phone) {

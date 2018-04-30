@@ -1,4 +1,6 @@
-package com.lucasambrosi._4_tema_agenda.Classes;
+package com.lucasambrosi._4_tema_agenda.io;
+
+import com.lucasambrosi._4_tema_agenda.pojo.Person;
 
 import java.util.Scanner;
 
