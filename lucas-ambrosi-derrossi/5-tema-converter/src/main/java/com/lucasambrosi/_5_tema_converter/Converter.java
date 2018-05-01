@@ -35,10 +35,8 @@ public class Converter {
             int decimalIndex = romanNumbers.indexOf(String.valueOf(splittedNumber[i]));
             if(i == lastPosition){
                 resultNumber += decimalNumbers.get(decimalIndex);
-
             } else if(splittedNumber[i] >= splittedNumber[i+1]){
                 resultNumber += decimalNumbers.get(decimalIndex);
-
             } else {
                 resultNumber -= decimalNumbers.get(decimalIndex);
             }
