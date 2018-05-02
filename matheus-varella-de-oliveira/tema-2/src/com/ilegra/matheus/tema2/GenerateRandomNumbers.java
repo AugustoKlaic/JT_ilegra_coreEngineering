@@ -25,7 +25,7 @@ public class GenerateRandomNumbers {
 
     public int generateEvenNumber() {
         int randomNumber = generateNumber();
-        generateNumber();
+//        generateNumber();
         if (parity(randomNumber)) {
             System.out.println(++randomNumber);
         } else {
