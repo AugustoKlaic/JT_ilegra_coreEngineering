@@ -3,13 +3,14 @@ package com.matheus.phonebook;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
 public class PhonebookTest {
 
-    ArrayList<Contact> myListTest;
+    List<Contact> myListTest;
     Phonebook phonebookTest;
     Contact contactTest;
 
@@ -48,7 +49,7 @@ public class PhonebookTest {
     @Test
     public void findContactByNameTest() {
         phonebookTest.addContact(contactTest);
-        ArrayList<Contact> contactsFounds = phonebookTest.findContactByName(contactTest.getName());
+        List<Contact> contactsFounds = phonebookTest.findContactByName(contactTest.getName());
         assertEquals(contactTest.getName(), contactsFounds.get(0).getName());
     }
 }
