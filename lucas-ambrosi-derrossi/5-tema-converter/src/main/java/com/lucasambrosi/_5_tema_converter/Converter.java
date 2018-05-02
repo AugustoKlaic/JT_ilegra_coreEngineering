@@ -33,11 +33,9 @@ public class Converter {
         for(int i = lastPosition; i >= 0; i--){
 
             int decimalIndex = romanNumbers.indexOf(String.valueOf(splittedNumber[i]));
-            if(i == lastPosition){
+            if(i == lastPosition || splittedNumber[i] >= splittedNumber[i+1]){
                 resultNumber += decimalNumbers.get(decimalIndex);
-            } else if(splittedNumber[i] >= splittedNumber[i+1]){
-                resultNumber += decimalNumbers.get(decimalIndex);
-            } else {
+            }  else {
                 resultNumber -= decimalNumbers.get(decimalIndex);
             }
         }
