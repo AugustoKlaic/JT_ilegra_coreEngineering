@@ -7,8 +7,7 @@ public class ScannerData {
     public static int scannerNumber() {
         Scanner reader = new java.util.Scanner(System.in);
         System.out.println("Insira seu numero");
-        int phonenumber = reader.nextInt();
-        return phonenumber;
+        return reader.nextInt();
     }
 
     public static String scannerEmail() {
