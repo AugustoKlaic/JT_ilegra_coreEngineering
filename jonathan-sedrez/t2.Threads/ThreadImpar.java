@@ -2,8 +2,7 @@ package com.jonathansedrez.thread;
 
 public class ThreadImpar implements Runnable {
 	
-	//Configura o tempo de sleep para essa thread
-	private static final int sleep = 100;
+	private static final int SLEEP = 100;
 	
 	@Override
 	public void run() {
@@ -13,7 +12,7 @@ public class ThreadImpar implements Runnable {
 			int numero = impar.geraImpar();			
 			System.out.print("Numero Impar: "+ numero + "\n");
 			try {
-				Thread.sleep(sleep);
+				Thread.sleep(SLEEP);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

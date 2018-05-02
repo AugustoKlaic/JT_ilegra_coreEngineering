@@ -2,8 +2,7 @@ package com.jonathansedrez.thread;
 
 public class ThreadPar implements Runnable{
 	
-	//Configura o tempo de sleep para essa thread
-	private static final int sleep = 500;
+	private static final int SLEEP = 500;
 	
 	@Override
 	public void run() {
@@ -13,7 +12,7 @@ public class ThreadPar implements Runnable{
 			int numero = par.geraPar();
 			System.out.print("Numero par: "+ numero + "\n");
 			try {
-				Thread.sleep(sleep);
+				Thread.sleep(SLEEP);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
