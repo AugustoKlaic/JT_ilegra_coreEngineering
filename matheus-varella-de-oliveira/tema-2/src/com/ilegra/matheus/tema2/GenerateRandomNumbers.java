@@ -7,10 +7,10 @@ import java.util.Random;
 public class GenerateRandomNumbers {
 
     private int generateNumber() {
-        int randomNumber;
+//        int randomNumber;
         Random randomGenerator = new Random();
-        randomNumber = randomGenerator.nextInt(100);
-        return randomNumber;
+        return randomGenerator.nextInt(100);
+//        return randomNumber;
     }
 
     public int generateOddNumber() {
