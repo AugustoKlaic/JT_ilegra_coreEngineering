@@ -45,7 +45,7 @@ public class Phonebook {
     }
 
     public List<Contact> findContactByName(String name) {
-        ArrayList<Contact> foundContactList = new ArrayList<>();
+        List<Contact> foundContactList = new ArrayList<>();
         for (Contact contact : contactList) {
             if (contact.getName().contains(name)) {
                 foundContactList.add(contact);
