@@ -13,11 +13,11 @@ public class Phonebook {
 
 
     public Contact selectData() {
-        int incrementId;
         Contact contact = new Contact(
                 ScannerData.scannerName(),
                 ScannerData.scannerNumber(),
                 ScannerData.scannerEmail());
+        int incrementId;
         try {
             incrementId = contactList.get(contactList.size() - 1).getId();
             contact.setId(++incrementId);
