@@ -13,9 +13,8 @@ public class Phonebook {
 
 
     public Contact selectData() {
-        Contact contact;
         int incrementId;
-        contact = new Contact(
+        Contact contact = new Contact(
                 ScannerData.scannerName(),
                 ScannerData.scannerNumber(),
                 ScannerData.scannerEmail());
