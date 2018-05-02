@@ -1,6 +1,6 @@
 package com.matheus.phonebook;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Printer {
     public void printer(Contact contact) {
@@ -10,7 +10,7 @@ public class Printer {
         System.out.println("ID do contato: " + contact.getId());
     }
 
-    public void printer(ArrayList<Contact> myList) {
+    public void printer(List<Contact> myList) {
         System.out.println("Lista de contatos:");
         for (int i = 0; i < myList.size(); i++) {
             printer(myList.get(i));
