@@ -1,10 +1,11 @@
 package com.matheus.phonebook;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Phonebook {
-    ArrayList<Contact> myList = new ArrayList<Contact>();
+    List<Contact> myList = new ArrayList<>();
 
     public boolean addContact(Contact contact) {
         return myList.add(contact);
@@ -26,7 +27,7 @@ public class Phonebook {
         return contact;
     }
 
-    public ArrayList<Contact> listContacts() {
+    public List<Contact> listContacts() {
         System.out.println("Quantidade  de contatos na lista:" + myList.size());
         return myList;
     }
@@ -44,7 +45,7 @@ public class Phonebook {
         return null;
     }
 
-    public ArrayList<Contact> findContactByName(String name) {
+    public List<Contact> findContactByName(String name) {
         ArrayList<Contact> foundContactList = new ArrayList<>();
         for (Contact contact : myList) {
             if (contact.getName().contains(name)) {
