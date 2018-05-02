@@ -7,10 +7,8 @@ import java.util.Random;
 public class GenerateRandomNumbers {
 
     private int generateNumber() {
-//        int randomNumber;
         Random randomGenerator = new Random();
         return randomGenerator.nextInt(100);
-//        return randomNumber;
     }
 
     public int generateOddNumber() {
@@ -25,7 +23,6 @@ public class GenerateRandomNumbers {
 
     public int generateEvenNumber() {
         int randomNumber = generateNumber();
-//        generateNumber();
         if (parity(randomNumber)) {
             System.out.println(++randomNumber);
         } else {
