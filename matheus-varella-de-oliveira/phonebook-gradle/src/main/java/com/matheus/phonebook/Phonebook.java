@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Phonebook {
-    List<Contact> contactList = new ArrayList<>();
+    private List<Contact> contactList = new ArrayList<>();
 
     public boolean addContact(Contact contact) {
         return contactList.add(contact);

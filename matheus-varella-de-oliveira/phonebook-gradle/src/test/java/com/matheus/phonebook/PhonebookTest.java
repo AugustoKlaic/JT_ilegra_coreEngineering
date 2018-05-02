@@ -35,7 +35,7 @@ public class PhonebookTest {
         phonebookTest.addContact(contactTest);
         phonebookTest.removeContactById(contactTest.getId());
 
-        assertSame(phonebookTest.contactList.size(), phonebookNotModified.contactList.size());
+        assertSame(phonebookTest.listContacts().size(), phonebookNotModified.listContacts().size());
     }
 
     @Test
