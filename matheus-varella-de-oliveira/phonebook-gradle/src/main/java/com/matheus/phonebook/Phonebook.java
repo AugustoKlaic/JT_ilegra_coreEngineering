@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class Phonebook {
-    List<Contact> myList = new ArrayList<>();
+    List<Contact> contactList = new ArrayList<>();
 
     public boolean addContact(Contact contact) {
-        return myList.add(contact);
+        return contactList.add(contact);
     }
 
 
@@ -19,7 +19,7 @@ public class Phonebook {
                 ScannerData.scannerNumber(),
                 ScannerData.scannerEmail());
         try {
-            incrementId = myList.get(myList.size() - 1).getId();
+            incrementId = contactList.get(contactList.size() - 1).getId();
             contact.setId(++incrementId);
         } catch (IndexOutOfBoundsException ex) {
         }
@@ -27,16 +27,16 @@ public class Phonebook {
     }
 
     public List<Contact> listContacts() {
-        System.out.println("Quantidade  de contatos na lista:" + myList.size());
-        return myList;
+        System.out.println("Quantidade  de contatos na lista:" + contactList.size());
+        return contactList;
     }
 
     public Contact removeContactById(int id) {
-        return myList.remove(id);
+        return contactList.remove(id);
     }
 
     public Contact findContactById(int id) {
-        for (Contact contact : myList) {
+        for (Contact contact : contactList) {
             if (Objects.equals(contact.getId(), id)) {
                 return contact;
             }
@@ -46,7 +46,7 @@ public class Phonebook {
 
     public List<Contact> findContactByName(String name) {
         ArrayList<Contact> foundContactList = new ArrayList<>();
-        for (Contact contact : myList) {
+        for (Contact contact : contactList) {
             if (contact.getName().contains(name)) {
                 foundContactList.add(contact);
             }

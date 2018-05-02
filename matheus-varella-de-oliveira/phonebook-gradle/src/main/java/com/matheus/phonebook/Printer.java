@@ -10,10 +10,10 @@ public class Printer {
         System.out.println("ID do contato: " + contact.getId());
     }
 
-    public void printer(List<Contact> myList) {
+    public void printer(List<Contact> contactList) {
         System.out.println("Lista de contatos:");
-        for (int i = 0; i < myList.size(); i++) {
-            printer(myList.get(i));
+        for (int i = 0; i < contactList.size(); i++) {
+            printer(contactList.get(i));
         }
     }
 }

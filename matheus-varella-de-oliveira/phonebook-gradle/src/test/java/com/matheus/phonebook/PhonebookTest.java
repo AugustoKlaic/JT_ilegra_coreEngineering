@@ -10,13 +10,13 @@ import static org.junit.Assert.*;
 
 public class PhonebookTest {
 
-    List<Contact> myListTest;
+    List<Contact> contactListTest;
     Phonebook phonebookTest;
     Contact contactTest;
 
     @Before
     public void before() {
-        myListTest = new ArrayList<Contact>();
+        contactListTest = new ArrayList<Contact>();
         phonebookTest = new Phonebook();
         contactTest = new Contact("Matheus", 5444, "matheus.matheus@matheus.mat");
     }
@@ -35,7 +35,7 @@ public class PhonebookTest {
         phonebookTest.addContact(contactTest);
         phonebookTest.removeContactById(contactTest.getId());
 
-        assertSame(phonebookTest.myList.size(), phonebookNotModified.myList.size());
+        assertSame(phonebookTest.contactList.size(), phonebookNotModified.contactList.size());
     }
 
     @Test
