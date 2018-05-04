@@ -13,8 +13,6 @@ public class ThreadRandom {
 	}
 	
 	public int geraImpar() {
-		int numero;
-		numero = geraPar()+1;
-		return numero+1;
+		return geraPar()+1;
 	}
 }
