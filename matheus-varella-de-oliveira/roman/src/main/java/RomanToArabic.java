@@ -18,20 +18,26 @@ public class RomanToArabic {
         int arabicNumberResult = 0;
         for (int i = 0; i < romanNumber.length(); i++) {
             String currentSymbol = "";
-            int currentValue = mapRoman.get(Character.toString(romanNumber.charAt(i)));
+//            getRomanNumber(romanNumber,i);
+//            int currentValue = mapRoman.get(Character.toString(romanNumber.charAt(i)));
             if (i == lastPosition) {
-                arabicNumberResult += currentValue;
+                arabicNumberResult += getRomanNumber(romanNumber,i);
             } else {
                 int nextValue = mapRoman.get(Character.toString(romanNumber.charAt(i+1)));
-                if (currentValue < nextValue) {
+                if (getRomanNumber(romanNumber,i) < nextValue) {
                     currentSymbol += Character.toString(romanNumber.charAt(i)) + Character.toString(romanNumber.charAt(i + 1));
                     arabicNumberResult += mapRoman.get(currentSymbol);
                     i += 1;
                 } else {
-                    arabicNumberResult += mapRoman.get(Character.toString(romanNumber.charAt(i)));
+                    arabicNumberResult += getRomanNumber(romanNumber,i);
                 }
             }
         }
         return arabicNumberResult;
+    }
+
+    public static int getRomanNumber(String romanNumber, int i){
+        int currentValue = mapRoman.get(Character.toString(romanNumber.charAt(i)));
+        return currentValue;
     }
 }

@@ -11,26 +11,26 @@ public class RomanToArabicTest {
     }
 
     @Test
-    public void toArabicTest() {
-        assertEquals(1, romanToArabic.toArabic("I"));
-        assertEquals(2, romanToArabic.toArabic("II"));
-        assertEquals(3, romanToArabic.toArabic("III"));
-        assertEquals(4, romanToArabic.toArabic("IV"));
-        assertEquals(5, romanToArabic.toArabic("V"));
-        assertEquals(6, romanToArabic.toArabic("VI"));
-        assertEquals(7, romanToArabic.toArabic("VII"));
-        assertEquals(8, romanToArabic.toArabic("VIII"));
-        assertEquals(9, romanToArabic.toArabic("IX"));
-        assertEquals(10, romanToArabic.toArabic("X"));
-        assertEquals(11, romanToArabic.toArabic("XI"));
-        assertEquals(12, romanToArabic.toArabic("XII"));
-        assertEquals(13, romanToArabic.toArabic("XIII"));
-        assertEquals(14, romanToArabic.toArabic("XIV"));
-        assertEquals(15, romanToArabic.toArabic("XV"));
-        assertEquals(16, romanToArabic.toArabic("XVI"));
-        assertEquals(17, romanToArabic.toArabic("XVII"));
-        assertEquals(18, romanToArabic.toArabic("XVIII"));
-        assertEquals(19, romanToArabic.toArabic("XIX"));
-        assertEquals(20, romanToArabic.toArabic("XX"));
+    public void toArabicTranslateTest() {
+        assertEquals(1, romanToArabic.toArabicTranslate("I"));
+        assertEquals(2, romanToArabic.toArabicTranslate("II"));
+        assertEquals(3, romanToArabic.toArabicTranslate("III"));
+        assertEquals(4, romanToArabic.toArabicTranslate("IV"));
+        assertEquals(5, romanToArabic.toArabicTranslate("V"));
+        assertEquals(6, romanToArabic.toArabicTranslate("VI"));
+        assertEquals(7, romanToArabic.toArabicTranslate("VII"));
+        assertEquals(8, romanToArabic.toArabicTranslate("VIII"));
+        assertEquals(9, romanToArabic.toArabicTranslate("IX"));
+        assertEquals(10, romanToArabic.toArabicTranslate("X"));
+        assertEquals(11, romanToArabic.toArabicTranslate("XI"));
+        assertEquals(12, romanToArabic.toArabicTranslate("XII"));
+        assertEquals(13, romanToArabic.toArabicTranslate("XIII"));
+        assertEquals(14, romanToArabic.toArabicTranslate("XIV"));
+        assertEquals(15, romanToArabic.toArabicTranslate("XV"));
+        assertEquals(16, romanToArabic.toArabicTranslate("XVI"));
+        assertEquals(17, romanToArabic.toArabicTranslate("XVII"));
+        assertEquals(18, romanToArabic.toArabicTranslate("XVIII"));
+        assertEquals(19, romanToArabic.toArabicTranslate("XIX"));
+        assertEquals(20, romanToArabic.toArabicTranslate("XX"));
     }
 }
