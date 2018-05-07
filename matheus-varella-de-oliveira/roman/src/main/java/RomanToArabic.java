@@ -18,8 +18,6 @@ public class RomanToArabic {
         int arabicNumberResult = 0;
         for (int i = 0; i < romanNumber.length(); i++) {
             String currentSymbol = "";
-//            getRomanNumber(romanNumber,i);
-//            int currentValue = mapRoman.get(Character.toString(romanNumber.charAt(i)));
             if (i == lastPosition) {
                 arabicNumberResult += getRomanNumber(romanNumber,i);
             } else {
