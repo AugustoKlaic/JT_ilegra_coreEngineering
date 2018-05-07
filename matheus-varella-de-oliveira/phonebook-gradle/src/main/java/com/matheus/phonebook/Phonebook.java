@@ -11,17 +11,15 @@ public class Phonebook {
         return contactList.add(contact);
     }
 
-
     public Contact selectData() {
         Contact contact = new Contact(
                 ScannerData.scannerName(),
                 ScannerData.scannerNumber(),
                 ScannerData.scannerEmail());
-        int incrementId;
         try {
-            incrementId = contactList.get(contactList.size() - 1).getId();
-            contact.setId(++incrementId);
+            contact.setId(Identifier.generateId());
         } catch (IndexOutOfBoundsException ex) {
+
         }
         return contact;
     }
