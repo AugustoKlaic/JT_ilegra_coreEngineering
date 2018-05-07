@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Menu {
 
-    ScannerData scannerData = new ScannerData();
-    Phonebook phonebook = new Phonebook();
-    Printer printer = new Printer();
+    private ScannerData scannerData = new ScannerData();
+    private Phonebook phonebook = new Phonebook();
+    private Printer printer = new Printer();
 
     public void menu() {
         System.out.println("Menu:");
