@@ -6,14 +6,18 @@ public class Fluorescente implements Lampada{
 
 	@Override
 	public void on() {
+		if (status == false) {
 			status = true;
 			System.out.println("Lampada Fluorescente ligada");
+		}
 	}
 
 	@Override
 	public void off() {
+		if (status == true) {
 			status = false;
 			System.out.println("Lampada Fluorescente desligada");
+		}
 	}
 	
 	@Override
@@ -23,5 +27,10 @@ public class Fluorescente implements Lampada{
 		} else {
 			on();
 		}
+	}
+	
+	@Override
+	public boolean verStatus() {
+		return status;
 	}
 }

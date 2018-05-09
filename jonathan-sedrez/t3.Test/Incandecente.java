@@ -6,14 +6,18 @@ public class Incandecente implements Lampada{
 
 	@Override
 	public void on() {
+		if (status == false) {
 			status = true;
 			System.out.println("Lampada Incandecente ligada");
+		} 
 	}
 
 	@Override
 	public void off() {
+		if (status == true) {
 			status = false;
 			System.out.println("Lampada Incandecente desligada");
+		} 
 	}
 	
 	@Override
@@ -23,5 +27,10 @@ public class Incandecente implements Lampada{
 		} else {
 			on();
 		}
+	}
+
+	@Override
+	public boolean verStatus() {
+		return status;
 	}
 }

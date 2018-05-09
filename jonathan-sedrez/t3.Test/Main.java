@@ -12,5 +12,7 @@ public class Main {
 		lampadaFluorescente.change();
 		lampadaFluorescente.change();
 		lampadaFluorescente.change();
+		lampadaFluorescente.verStatus();
+		
 	}
 }

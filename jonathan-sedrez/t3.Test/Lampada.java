@@ -7,4 +7,6 @@ public interface Lampada {
 	public void off();
 
 	public void turn();
+	
+	public boolean verStatus();
 }

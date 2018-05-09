@@ -11,4 +11,8 @@ public class Switch {
 	public void change(){
 		lampada.turn();
 	}
+	
+	public boolean verStatus() {
+		return lampada.verStatus();
+	}
 }
