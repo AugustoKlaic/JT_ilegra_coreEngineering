@@ -1,5 +1,7 @@
 package com.java.augusto.business;
 
+import java.util.Comparator;
+
 public class Pessoa {
 	private int ID;
 	private String nome;

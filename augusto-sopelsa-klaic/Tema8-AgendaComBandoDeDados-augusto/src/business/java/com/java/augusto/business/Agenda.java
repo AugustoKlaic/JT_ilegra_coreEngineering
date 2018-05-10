@@ -1,6 +1,7 @@
 package com.java.augusto.business;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.java.augusto.persistence.PessoaDao;
@@ -53,6 +54,11 @@ public class Agenda {
 		 * return null;
 		 */
 	}
+	
+	public void ordenaLista(String tipo) {
+		pessoas = pessoasbanco.ordenaContatos(tipo);
+	}
+	
 
 	public void carregaDadosDoBanco() {
 		pessoas = pessoasbanco.carregaDadosDoBanco();

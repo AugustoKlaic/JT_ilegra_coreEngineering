@@ -70,6 +70,13 @@ public class Menu {
 		if (agenda.getTodasContatos().isEmpty()) {
 			System.out.println("Lista de contato vazia.\n");
 		}
+		
+		System.out.println("Deseja ordenar a lista por nome ou por ID?[Digite: nome ou id]\n ");
+		Scanner scanner = new Scanner(System.in);
+		String lerDoTeclado = scanner.nextLine();
+		agenda.ordenaLista(lerDoTeclado);
+		
+		
 		for (Pessoa p : agenda.getTodasContatos()) {
 			System.out.println(p.toString());
 		}

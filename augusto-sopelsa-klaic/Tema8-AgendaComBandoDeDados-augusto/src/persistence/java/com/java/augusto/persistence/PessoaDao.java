@@ -102,6 +102,27 @@ public class PessoaDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public List<Pessoa> ordenaContatos(String tipo) {
+		Connection connection = ConexaoBanco.abrir();
+		String sql = "select * from Pessoa order by " + tipo + ";";
+		List<Pessoa> pessoasbanco = new ArrayList<Pessoa>();
+
+		try {
+			PreparedStatement pstm = connection.prepareStatement(sql);
+			ResultSet resultset = pstm.executeQuery();
+			while (resultset.next()) {
+				pessoasbanco.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
+						resultset.getString("email"), resultset.getString("telefone")));
+			}
+			resultset.close();
+			pstm.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return pessoasbanco;
 
 	}
 }
