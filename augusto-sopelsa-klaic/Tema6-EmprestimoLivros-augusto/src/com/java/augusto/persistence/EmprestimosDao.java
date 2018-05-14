@@ -27,17 +27,6 @@ public class EmprestimosDao {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		/*
-		 * JSONObject jsonObject = new JSONObject(); FileWriter writeFile = null; try {
-		 * jsonObject.put("idemprestimo", emprestimo.getIdEmprestimo());
-		 * jsonObject.put("pessoa", emprestimo.getPessoa()); jsonObject.put("livro",
-		 * emprestimo.getLivro()); jsonObject.put("prazo",
-		 * emprestimo.getPrazoEntrega()); jsonObject.put("emprestimoatrasados",
-		 * emprestimo.getEmprestimosAtrasados()); writeFile = new
-		 * FileWriter("Emprestimos.json"); writeFile.write(jsonObject.toString());
-		 * writeFile.close(); } catch (IOException e) { e.printStackTrace(); }
-		 */
 	}
 
 	public List<Emprestimo> carregaDadosEmprestimo() {
@@ -52,20 +41,6 @@ public class EmprestimosDao {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return null;
-
-		/*
-		 * JSONObject jsonObject; JSONParser parser = new JSONParser(); Pessoa pessoa;
-		 * Livro livro; int idemprestimo; LocalDate prazo; Map<String, Integer>
-		 * emprestimosatrasados = new HashMap<String, Integer>(); try { jsonObject =
-		 * (JSONObject) parser.parse(new FileReader("Emprestimos.json")); pessoa =
-		 * (Pessoa) jsonObject.get("pessoa"); livro = (Livro) jsonObject.get("livro");
-		 * idemprestimo = (int) jsonObject.get("idemprestimo"); prazo = (LocalDate)
-		 * jsonObject.get("prazo"); emprestimosatrasados = (Map<String,Integer>)
-		 * jsonObject.get("emprestimosatrasados"); return new Emprestimo(pessoa,livro);
-		 * } catch (FileNotFoundException e) { e.printStackTrace(); } catch (IOException
-		 * e) { e.printStackTrace(); } catch (ParseException e) { e.printStackTrace(); }
-		 * return null;
-		 */
+		return new ArrayList<Emprestimo>();
 	}
 }

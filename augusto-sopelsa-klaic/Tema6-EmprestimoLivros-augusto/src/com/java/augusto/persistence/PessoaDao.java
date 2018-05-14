@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.java.augusto.business.Emprestimo;
 import com.java.augusto.business.Pessoa;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -27,18 +28,6 @@ public class PessoaDao {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		/*
-		 * JSONObject jsonObject = new JSONObject(); FileWriter writeFile = null; try {
-		 * jsonObject.put("cpf", pessoa.getCPF()); jsonObject.put("nome",
-		 * pessoa.getNome()); jsonObject.put("numerodelivros",
-		 * pessoa.getNUmeroLivrosAlugados()); jsonObject.put("top10",
-		 * pessoa.getLivrosQueJaRetirou());
-		 * 
-		 * writeFile = new FileWriter("Pessoas.json");
-		 * writeFile.write(jsonObject.toString()); writeFile.close(); } catch
-		 * (IOException e) { e.printStackTrace(); }
-		 */
 	}
 
 	public List<Pessoa> carregaDadosPessoa() {
@@ -53,22 +42,7 @@ public class PessoaDao {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return null;
-
-		/*
-		 * JSONObject jsonObject; JSONParser parser = new JSONParser(); String cpf;
-		 * String nome; int numerodelivros; List<Livro> top10 = new ArrayList<Livro>();
-		 * 
-		 * try { jsonObject = (JSONObject) parser.parse(new FileReader("Livros.json"));
-		 * cpf = (String) jsonObject.get("cpf"); nome = (String) jsonObject.get("nome");
-		 * numerodelivros = (Integer) jsonObject.get("numerodelivros"); top10 =
-		 * (List<Livro>) jsonObject.get("top10");
-		 * 
-		 * return new Pessoa(cpf,nome,numerodelivros,top10); } catch
-		 * (FileNotFoundException e) { e.printStackTrace(); } catch (IOException e) {
-		 * e.printStackTrace(); } catch (ParseException e) { e.printStackTrace(); }
-		 * return null;
-		 */
+		return new ArrayList<Pessoa>();
 	}
 
 }

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.java.augusto.business.Emprestimo;
 import com.java.augusto.business.Livro;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -27,17 +28,6 @@ public class LivrosDao {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		/*
-		 * JSONObject jsonObject = new JSONObject(); FileWriter writeFile = null; try {
-		 * jsonObject.put("id", livro.getID()); jsonObject.put("titulo",
-		 * livro.getTitulo()); jsonObject.put("autor", livro.getAutor());
-		 * jsonObject.put("emprestado", livro.getEmprestado());
-		 * 
-		 * writeFile = new FileWriter("Livros.json");
-		 * writeFile.write(jsonObject.toString()); writeFile.close(); } catch
-		 * (IOException e) { e.printStackTrace(); }
-		 */
 	}
 
 	public List<Livro> carregaDadosLivros() {
@@ -51,20 +41,6 @@ public class LivrosDao {
 			return listlivro;
 		} catch (FileNotFoundException e) {
 		}
-		return null;
-
-		/*
-		 * JSONObject jsonObject; JSONParser parser = new JSONParser(); long id; String
-		 * titulo, autor; boolean emprestado;
-		 * 
-		 * try { jsonObject = (JSONObject) parser.parse(new FileReader("Livros.json"));
-		 * id = (long) jsonObject.get("id"); titulo = (String) jsonObject.get("titulo");
-		 * autor = (String) jsonObject.get("autor"); emprestado = (boolean)
-		 * jsonObject.get("emprestado"); //return new Livro(id, titulo, autor,
-		 * emprestado); } catch (FileNotFoundException e) { e.printStackTrace(); } catch
-		 * (IOException e) { e.printStackTrace(); } catch (ParseException e) {
-		 * e.printStackTrace(); }catch (NullPointerException e) { e.printStackTrace(); }
-		 * return null;
-		 */
+		return new ArrayList<Livro>();
 	}
 }

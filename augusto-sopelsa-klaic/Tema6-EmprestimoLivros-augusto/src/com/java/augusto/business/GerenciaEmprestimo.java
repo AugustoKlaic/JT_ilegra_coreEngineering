@@ -39,11 +39,9 @@ public class GerenciaEmprestimo {
 	}
 
 	public void renovaEmprestimo(String titulo) {
-		LocalDate novadata = null;
 		for (Emprestimo emprestimo : todosemprestimos) {
 			if (emprestimo.getLivro().getTitulo().equals(titulo)) {
-				novadata = emprestimo.getDiaEmprestimo().plusDays(7);
-				emprestimo.setRenovacaoEmprestimo(novadata);
+				emprestimo.setRenovacaoEmprestimo(emprestimo.getDiaEmprestimo().plusDays(7));
 			}
 		}
 	}
