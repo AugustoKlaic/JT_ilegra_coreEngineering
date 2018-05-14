@@ -15,11 +15,8 @@ public class ConexaoBanco {
 
 		try {
 			Class.forName(DRIVER);
-			Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA);
-			return conn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
+			return DriverManager.getConnection(URL, USUARIO, SENHA);
+		} catch (ClassNotFoundException|SQLException e) {
 			e.printStackTrace();
 		}
 		return null;

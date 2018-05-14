@@ -12,64 +12,47 @@ import com.java.augusto.business.Pessoa;
 public class PessoaDao {
 
 	public List<Pessoa> carregaDadosDoBanco() {
-
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "select * from Pessoa;";
-		List<Pessoa> pessoasbanco = new ArrayList<Pessoa>();
-
-		try {
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		try (Connection connection = ConexaoBanco.abrir()) {
+			String sql = "select * from Pessoa;";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			ResultSet resultset = pstm.executeQuery();
 			while (resultset.next()) {
-				pessoasbanco.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
+				pessoas.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
 						resultset.getString("email"), resultset.getString("telefone")));
 			}
-			resultset.close();
-			pstm.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return pessoasbanco;
+		return pessoas;
 	}
 
 	public List<Pessoa> buscaContatoPorNome(String nome) {
-
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "select * from Pessoa where nome like '%" + nome + "%';";
-		List<Pessoa> pessoasbanco = new ArrayList<Pessoa>();
-
-		try {
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		try (Connection connection = ConexaoBanco.abrir();) {
+			String sql = "select * from Pessoa where nome like '%" + nome + "%';";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			ResultSet resultset = pstm.executeQuery();
 			while (resultset.next()) {
-				pessoasbanco.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
+				pessoas.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
 						resultset.getString("email"), resultset.getString("telefone")));
 			}
-			resultset.close();
-			pstm.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return pessoasbanco;
+		return pessoas;
 	}
 
 	public Pessoa buscaContatoPorId(int id) {
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "select * from Pessoa where id = " + id + ";";
 		Pessoa pessoaaux = null;
-
-		try {
+		try (Connection connection = ConexaoBanco.abrir()) {
+			String sql = "select * from Pessoa where id = " + id + ";";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			ResultSet resultset = pstm.executeQuery();
 			while (resultset.next()) {
 				pessoaaux = new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
 						resultset.getString("email"), resultset.getString("telefone"));
 			}
-			resultset.close();
-			pstm.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -77,43 +60,35 @@ public class PessoaDao {
 	}
 
 	public void adicionaContato(Pessoa pessoa) {
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "insert into Pessoa(nome,email,telefone) values('" + pessoa.getNome() + "','" + pessoa.getEmail()
-				+ "','" + pessoa.getTelefone() + "');";
-		try {
+
+		try (Connection connection = ConexaoBanco.abrir()) {
+			String sql = "insert into Pessoa(nome,email,telefone) values('" + pessoa.getNome() + "','"
+					+ pessoa.getEmail() + "','" + pessoa.getTelefone() + "');";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			int resultset = pstm.executeUpdate();
-			pstm.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
 	public void removeContato(int id) {
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "delete from Pessoa where id = " + id + ";";
-
-		try {
+		try (Connection connection = ConexaoBanco.abrir()) {
+			String sql = "delete from Pessoa where id = " + id + ";";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			int resultset = pstm.executeUpdate();
-			pstm.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
 	public List<Pessoa> ordenaContatos(String tipo) {
-		Connection connection = ConexaoBanco.abrir();
-		String sql = "select * from Pessoa order by " + tipo + ";";
-		List<Pessoa> pessoasbanco = new ArrayList<Pessoa>();
-
-		try {
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		try (Connection connection = ConexaoBanco.abrir()) {
+			String sql = "select * from Pessoa order by " + tipo + ";";
 			PreparedStatement pstm = connection.prepareStatement(sql);
 			ResultSet resultset = pstm.executeQuery();
 			while (resultset.next()) {
-				pessoasbanco.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
+				pessoas.add(new Pessoa(resultset.getInt("id"), resultset.getString("nome"),
 						resultset.getString("email"), resultset.getString("telefone")));
 			}
 			resultset.close();
@@ -122,7 +97,6 @@ public class PessoaDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return pessoasbanco;
-
+		return pessoas;
 	}
 }
