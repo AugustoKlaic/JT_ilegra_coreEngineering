@@ -32,17 +32,6 @@ public class Pessoa {
 		private LocalDate datanascimento;
 		private Endereco endereco;
 
-		public PessoaBuilder adicionaEndereco(Endereco endereco) {
-			this.endereco = new Endereco.EnderecoBuilder()
-										.adicionaRua(endereco.getRua())
-										.adicionaNumero(endereco.getNumero())
-										.adiconaCidade(endereco.getCidade())
-										.adicionaEstado(endereco.getEstado())
-										.criaEndereco();
-			
-			return this;
-		}
-
 		public PessoaBuilder adicionaDataNascimento(LocalDate datanascimento) {
 			this.datanascimento = datanascimento;
 			return this;
@@ -50,6 +39,11 @@ public class Pessoa {
 
 		public PessoaBuilder adicionaNome(String nome) {
 			this.nome = nome;
+			return this;
+		}
+		
+		public PessoaBuilder adicionaEndereco(String rua, int numero, String cidade,String estado) {
+			this.endereco = new Endereco(rua,numero,cidade,estado);
 			return this;
 		}
 		

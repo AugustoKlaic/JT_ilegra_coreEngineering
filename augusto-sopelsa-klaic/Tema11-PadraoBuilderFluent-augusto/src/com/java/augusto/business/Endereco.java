@@ -6,11 +6,11 @@ public class Endereco{
 	private String cidade;
 	private String estado;
 	
-	private Endereco(EnderecoBuilder builder) {
-		this.rua = builder.rua;
-		this.numero = builder.numero;
-		this.cidade = builder.cidade;
-		this.estado = builder.estado;
+	public Endereco(String rua, int numero, String cidade,String estado) {
+		this.rua = rua;
+		this.numero = numero;
+		this.cidade = cidade;
+		this.estado = estado;
 	}
 	
 	public String getRua() {
@@ -27,37 +27,6 @@ public class Endereco{
 	
 	public String getEstado() {
 		return estado;
-	}
-	
-	public static class EnderecoBuilder{
-		private String rua;
-		private int numero;
-		private String cidade;
-		private String estado;
-		
-		public EnderecoBuilder adicionaRua(String rua) {
-			this.rua = rua;
-			return this;
-		}
-		
-		public EnderecoBuilder adicionaNumero(int numero) {
-			this.numero = numero;
-			return this;
-		}
-		
-		public EnderecoBuilder adiconaCidade(String cidade) {
-			this.cidade = cidade;
-			return this;
-		}
-		
-		public EnderecoBuilder adicionaEstado(String estado) {
-			this.estado = estado;
-			return this;
-		}
-		
-		public Endereco criaEndereco() {
-			return new Endereco(this);
-		}
 	}
 	
 	@Override

@@ -11,12 +11,7 @@ public class Main{
 		Pessoa pessoa = new Pessoa.PessoaBuilder()
 						.adicionaNome("Augusto")
 						.adicionaDataNascimento(LocalDate.now())
-						.adicionaEndereco(new Endereco
-								.EnderecoBuilder().adicionaRua("Santo Antonio")
-								.adicionaNumero(123)
-								.adiconaCidade("Porto Alegre")
-								.adicionaEstado("Rio Grande do Sul")
-								.criaEndereco())
+						.adicionaEndereco("Santo Antonio",123,"Porto Alegre","Rio Grande do Sul")
 						.CriaPessoa();
 		
 		System.out.println(pessoa.getNome());
