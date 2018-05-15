@@ -14,7 +14,7 @@ import com.java.augusto.business.Emprestimo;
 
 public class EmprestimosDao {
 
-	public void gravaDadosEmprestimo(List<Emprestimo> emprestimos) {
+	public void gravarDadosEmprestimo(List<Emprestimo> emprestimos) {
 
 		Gson gson = new Gson();
 		String json = gson.toJson(emprestimos);
@@ -29,7 +29,7 @@ public class EmprestimosDao {
 		}
 	}
 
-	public List<Emprestimo> carregaDadosEmprestimo() {
+	public List<Emprestimo> carregarDadosEmprestimo() {
 
 		Type typeFound = new TypeToken<ArrayList<Emprestimo>>() {
 		}.getType();

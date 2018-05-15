@@ -19,11 +19,11 @@ public class Biblioteca {
 		return livros;
 	}
 
-	public void adicionaLivro(Livro livro) {
+	public void adicionarLivro(Livro livro) {
 		this.livros.add(livro);
 	}
 
-	public void excluiLivro(int id) {
+	public void excluirLivro(int id) {
 		for (Livro livro : livros) {
 			if (livro.getEmprestado() == false && livro.getID() == id) {
 				livros.remove(livro);
@@ -32,7 +32,7 @@ public class Biblioteca {
 		}	
 	}
 
-	public List<Livro> buscaLivroTituloPorSemelhanca(String titulo) {
+	public List<Livro> buscarLivroTituloPorSemelhanca(String titulo) {
 		List<Livro> livrosaux = new ArrayList<>();
 
 		for (Livro livro : livros) {
@@ -43,7 +43,7 @@ public class Biblioteca {
 		return livrosaux;
 	}
 
-	public Livro buscaLivroTitulo(String titulo) {
+	public Livro buscarLivroTitulo(String titulo) {
 
 		for (Livro livro : livros) {
 			if (livro.getTitulo().equals(titulo)) {
@@ -53,7 +53,7 @@ public class Biblioteca {
 		return null;
 	}
 
-	public List<Livro> buscaLivroAutor(String autor) {
+	public List<Livro> buscarLivroAutor(String autor) {
 		List<Livro> livrosaux = new ArrayList<>();
 
 		for (Livro livro : livros) {
@@ -64,13 +64,13 @@ public class Biblioteca {
 		return livrosaux;
 	}
 
-	public void carregaDadosLivros() {
+	public void carregarDadosLivros() {
 
-		livros = livrosdao.carregaDadosLivros();
+		livros = livrosdao.carregarDadosLivros();
 	}
 
-	public void guardaDadosLivros() {
+	public void guardarDadosLivros() {
 
-		livrosdao.gravaDadosLivros(livros);
+		livrosdao.gravarDadosLivros(livros);
 	}
 }

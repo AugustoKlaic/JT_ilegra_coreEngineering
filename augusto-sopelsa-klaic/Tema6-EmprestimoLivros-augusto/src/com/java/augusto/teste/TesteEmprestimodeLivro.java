@@ -22,11 +22,11 @@ public class TesteEmprestimodeLivro {
 	@Before
 	public void setup() {
 		biblioteca = new Biblioteca();
-		biblioteca.carregaDadosLivros();
+		biblioteca.carregarDadosLivros();
 		clientes = new CadastroPessoas();
-		clientes.carregaDadosPessoa();
+		clientes.carregarDadosPessoa();
 		emprestimos = new GerenciaEmprestimo();
-		emprestimos.carregaDadosEmprestimo();
+		emprestimos.carregarDadosEmprestimo();
 	}
 	
 	@Test
@@ -38,79 +38,79 @@ public class TesteEmprestimodeLivro {
 	
 	@Test
 	public void testaAdicionaDados() {
-		biblioteca.adicionaLivro(new Livro("The Hobbit", "JRR Tolkien", false));
-		assertNotNull(biblioteca.buscaLivroTitulo("The Hobbit"));
-		assertNotNull(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), biblioteca.buscaLivroTitulo("The Hobbit"));
+		biblioteca.adicionarLivro(new Livro("The Hobbit", "JRR Tolkien", false));
+		assertNotNull(biblioteca.buscarLivroTitulo("The Hobbit"));
+		assertNotNull(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), biblioteca.buscarLivroTitulo("The Hobbit"));
 		assertNotNull(emprestimos.getEmprestimos());
 	}
 	
 	@Test
 	public void testaBuscaPorNome() {
-		assertEquals("Augusto Sopelsa Klaic", clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic").getNome());
-		biblioteca.adicionaLivro(new Livro("The Hobbit", "JRR Tolkien", false));
-		assertEquals("The Hobbit", biblioteca.buscaLivroTitulo("The Hobbit").getTitulo());
+		assertEquals("Augusto Sopelsa Klaic", clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic").getNome());
+		biblioteca.adicionarLivro(new Livro("The Hobbit", "JRR Tolkien", false));
+		assertEquals("The Hobbit", biblioteca.buscarLivroTitulo("The Hobbit").getTitulo());
 	}
 	
 	@Test
 	public void testaNovoEmprestimo() {
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("The Hobbit", "JRR Tolkien", false));
-		assertEquals(1, clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic").getNumeroAlugados());
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("The Hobbit", "JRR Tolkien", false));
+		assertEquals(1, clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic").getNumeroAlugados());
 	}
 	
 	@Test
 	public void testaUltrapassaNumeroDeLivros() {
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("The Hobbit", "JRR Tolkien", true));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR1", "JRR Tolkien", true));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR2", "JRR Tolkien", true));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR3", "JRR Tolkien", true));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("SIMARILLION", "JRR Tolkien", true));
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("Contos Inacabados", "JRR Tolkien", true));
-		assertEquals(5, clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic").getNumeroAlugados());
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("The Hobbit", "JRR Tolkien", true));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR1", "JRR Tolkien", true));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR2", "JRR Tolkien", true));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("LOTR3", "JRR Tolkien", true));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("SIMARILLION", "JRR Tolkien", true));
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("Contos Inacabados", "JRR Tolkien", true));
+		assertEquals(5, clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic").getNumeroAlugados());
 	}
 	
 	@Test
 	public void testaRenovacao() {
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("SIMARILLION", "JRR Tolkien", true));
-		System.out.println(emprestimos.buscaEmprestimo("SIMARILLION").getDiaEmprestimo());
-		emprestimos.renovaEmprestimo("SIMARILLION");
-		System.out.println(emprestimos.buscaEmprestimo("SIMARILLION").getPrazoEntrega());
-		assertEquals(LocalDate.now().plusDays(14),emprestimos.buscaEmprestimo("SIMARILLION").getPrazoEntrega());
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), new Livro("SIMARILLION", "JRR Tolkien", true));
+		System.out.println(emprestimos.buscarEmprestimo("SIMARILLION").getDiaEmprestimo());
+		emprestimos.renovarEmprestimo("SIMARILLION");
+		System.out.println(emprestimos.buscarEmprestimo("SIMARILLION").getPrazoEntrega());
+		assertEquals(LocalDate.now().plusDays(14),emprestimos.buscarEmprestimo("SIMARILLION").getPrazoEntrega());
 	}
 	
 	@Test
 	public void testaDevolucao() {
 		Livro livro = new Livro("SIMARILLION", "JRR Tolkien", false);
-		biblioteca.adicionaLivro(livro);
-		emprestimos.novoEmprestimo(clientes.buscaPessoaPorNome("Augusto Sopelsa Klaic"), livro);
-		emprestimos.devolveLivro(livro);
-		assertFalse(biblioteca.buscaLivroTitulo("SIMARILLION").getEmprestado());
+		biblioteca.adicionarLivro(livro);
+		emprestimos.novoEmprestimo(clientes.buscarPessoaPorNome("Augusto Sopelsa Klaic"), livro);
+		emprestimos.devolverLivro(livro);
+		assertFalse(biblioteca.buscarLivroTitulo("SIMARILLION").getEmprestado());
 	}
 	
 	@Test
 	public void testaBuscaLivroTituloPorSemelhanca() {
 		List<Livro> listaauxiliar = new ArrayList<Livro>();
 		Livro livro = new Livro("SIMARILLION", "JRR Tolkien", false);
-		biblioteca.adicionaLivro(livro);
+		biblioteca.adicionarLivro(livro);
 		listaauxiliar.add(livro);
-		assertEquals(listaauxiliar,biblioteca.buscaLivroTituloPorSemelhanca("SIMA"));
+		assertEquals(listaauxiliar,biblioteca.buscarLivroTituloPorSemelhanca("SIMA"));
 	}
 	
 	@Test
 	public void testeBuscaLivroAutor() {
 		List<Livro> listaauxiliar = new ArrayList<Livro>();
 		Livro livro = new Livro("SIMARILLION", "JRR Tolkien", false);
-		biblioteca.adicionaLivro(livro);
+		biblioteca.adicionarLivro(livro);
 		listaauxiliar.add(livro);
-		assertEquals(listaauxiliar,biblioteca.buscaLivroAutor("JRR"));
+		assertEquals(listaauxiliar,biblioteca.buscarLivroAutor("JRR"));
 	}
 	
 	@Test
 	public void testaExcluiLivro() {
 		Livro livro = new Livro("SIMARILLION", "JRR Tolkien", false);
-		biblioteca.adicionaLivro(livro);
+		biblioteca.adicionarLivro(livro);
 		assertEquals(1, biblioteca.getLivrosBiblioteca().size());
-		biblioteca.excluiLivro(livro.getID());
-		assertTrue(biblioteca.buscaLivroTituloPorSemelhanca("SIMA").isEmpty());
+		biblioteca.excluirLivro(livro.getID());
+		assertTrue(biblioteca.buscarLivroTituloPorSemelhanca("SIMA").isEmpty());
 	}
 }

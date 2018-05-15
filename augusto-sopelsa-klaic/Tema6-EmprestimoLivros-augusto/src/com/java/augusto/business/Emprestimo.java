@@ -48,7 +48,7 @@ public class Emprestimo {
 		return emprestimoatrasados;
 	}
 
-	public void adicionaCLienteAtrasadoEValor(Pessoa pessoa, int valormulta) {
+	public void adicionarCLienteAtrasadoEValor(Pessoa pessoa, int valormulta) {
 		emprestimoatrasados.put(pessoa.getNome(), valormulta);
 	}
 }

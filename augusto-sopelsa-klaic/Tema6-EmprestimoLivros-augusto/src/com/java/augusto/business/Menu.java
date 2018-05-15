@@ -13,13 +13,13 @@ public class Menu {
 	public Menu() {
 
 		biblioteca = new Biblioteca();
-		biblioteca.carregaDadosLivros();
+		biblioteca.carregarDadosLivros();
 		Livro.numID = biblioteca.getLivrosBiblioteca().size();
 		gerenciaemprestimo = new GerenciaEmprestimo();
-		gerenciaemprestimo.carregaDadosEmprestimo();
+		gerenciaemprestimo.carregarDadosEmprestimo();
 		Emprestimo.geraID = gerenciaemprestimo.getEmprestimos().size();
 		cadastropessoas = new CadastroPessoas();
-		cadastropessoas.carregaDadosPessoa();
+		cadastropessoas.carregarDadosPessoa();
 	}
 
 	public void inicializa() {
@@ -63,9 +63,9 @@ public class Menu {
 				verTop10();
 				break;
 			case "S":
-				biblioteca.guardaDadosLivros();
-				gerenciaemprestimo.gravaDadosEmprestimo();
-				cadastropessoas.guardaDadosPessoa();
+				biblioteca.guardarDadosLivros();
+				gerenciaemprestimo.gravarDadosEmprestimo();
+				cadastropessoas.guardarDadosPessoa();
 				System.exit(0);
 			default:
 				System.out.println("Opcao Invalida!\n ");
@@ -74,7 +74,7 @@ public class Menu {
 	}
 
 	public void verTop10() {
-		cadastropessoas.ordenaTop10();
+		cadastropessoas.ordenarTop10();
 		for (Pessoa pessoa : cadastropessoas.getCLientes()) {
 			for (int top = 0; top < 10; top++) {
 				System.out.println(top + 1 + "- " + pessoa.getNome());
@@ -89,7 +89,7 @@ public class Menu {
 		Scanner scannertitulo = new Scanner(System.in);
 		String lerDoTecladoTitulo = scannertitulo.nextLine();
 		System.out.println("O livro " + lerDoTecladoTitulo + " ja foi retirado por: ");
-		for (Pessoa pessoa : biblioteca.buscaLivroTitulo(lerDoTecladoTitulo).getHistorico()) {
+		for (Pessoa pessoa : biblioteca.buscarLivroTitulo(lerDoTecladoTitulo).getHistorico()) {
 			System.out.println(pessoa.toString());
 		}
 	}
@@ -100,7 +100,7 @@ public class Menu {
 		Scanner scannertitulo = new Scanner(System.in);
 		String lerDoTecladoTitulo = scannertitulo.nextLine();
 
-		gerenciaemprestimo.renovaEmprestimo(lerDoTecladoTitulo);
+		gerenciaemprestimo.renovarEmprestimo(lerDoTecladoTitulo);
 		System.out.println("Emprestimo Renovado.");
 	}
 
@@ -110,7 +110,7 @@ public class Menu {
 		Scanner scannertitulo = new Scanner(System.in);
 		String lerDoTecladoTitulo = scannertitulo.nextLine();
 
-		gerenciaemprestimo.devolveLivro(biblioteca.buscaLivroTitulo(lerDoTecladoTitulo));
+		gerenciaemprestimo.devolverLivro(biblioteca.buscarLivroTitulo(lerDoTecladoTitulo));
 	}
 
 	public void retiraLivro() {
@@ -123,8 +123,8 @@ public class Menu {
 		Scanner scannernome = new Scanner(System.in);
 		String lerDoTecladonome = scannernome.nextLine();
 
-		gerenciaemprestimo.novoEmprestimo(cadastropessoas.buscaPessoaPorNome(lerDoTecladonome),
-				biblioteca.buscaLivroTitulo(lerDoTecladoTitulo));
+		gerenciaemprestimo.novoEmprestimo(cadastropessoas.buscarPessoaPorNome(lerDoTecladonome),
+				biblioteca.buscarLivroTitulo(lerDoTecladoTitulo));
 	}
 
 	public void cadastra() {
@@ -137,7 +137,7 @@ public class Menu {
 		Scanner scannerautor = new Scanner(System.in);
 		String lerDoTecladoAutor = scannerautor.nextLine();
 
-		biblioteca.adicionaLivro((new Livro(lerDoTecladoTitulo, lerDoTecladoAutor, false)));
+		biblioteca.adicionarLivro((new Livro(lerDoTecladoTitulo, lerDoTecladoAutor, false)));
 		System.out.println("Novo livro cadastrado.");
 	}
 
@@ -146,7 +146,7 @@ public class Menu {
 		Scanner scannerId = new Scanner(System.in);
 		int lerDoTecladoId = scannerId.nextInt();
 
-		biblioteca.excluiLivro(lerDoTecladoId);
+		biblioteca.excluirLivro(lerDoTecladoId);
 		System.out.println("Livro removido.");
 	}
 
@@ -170,14 +170,14 @@ public class Menu {
 			System.out.println("Informe o Titulo do Livro:\n ");
 			Scanner scannertitulo = new Scanner(System.in);
 			String lerDoTecladoNome = scannertitulo.nextLine();
-			System.out.println(biblioteca.buscaLivroTitulo((lerDoTecladoNome)));
+			System.out.println(biblioteca.buscarLivroTitulo((lerDoTecladoNome)));
 			break;
 
 		case "A":
 			System.out.println("Informe o Autor do Livro:\n ");
 			Scanner scannerautor = new Scanner(System.in);
 			String lerDoTecladoAutor = scannerautor.nextLine();
-			System.out.println(biblioteca.buscaLivroAutor((lerDoTecladoAutor)));
+			System.out.println(biblioteca.buscarLivroAutor((lerDoTecladoAutor)));
 			break;
 		}
 	}

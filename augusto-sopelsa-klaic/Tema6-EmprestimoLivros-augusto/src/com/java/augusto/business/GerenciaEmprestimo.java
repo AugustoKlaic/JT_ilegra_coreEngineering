@@ -13,7 +13,7 @@ public class GerenciaEmprestimo {
 		todosemprestimos = new ArrayList<Emprestimo>();
 	}
 
-	public List<Emprestimo> listaEmprestimos() {
+	public List<Emprestimo> listarEmprestimos() {
 		return todosemprestimos;
 	}
 
@@ -29,7 +29,7 @@ public class GerenciaEmprestimo {
 			System.out.println("Você não pode retirar mais livro pois ja atingiu a cota maxima.\n");
 	}
 	
-	public Emprestimo buscaEmprestimo(String livro) {
+	public Emprestimo buscarEmprestimo(String livro) {
 		for(Emprestimo emprestimo : todosemprestimos) {
 			if(emprestimo.getLivro().getTitulo().equals(livro)) {
 				return emprestimo;
@@ -38,7 +38,7 @@ public class GerenciaEmprestimo {
 		return null;
 	}
 
-	public void renovaEmprestimo(String titulo) {
+	public void renovarEmprestimo(String titulo) {
 		for (Emprestimo emprestimo : todosemprestimos) {
 			if (emprestimo.getLivro().getTitulo().equals(titulo)) {
 				emprestimo.setRenovacaoEmprestimo(emprestimo.getDiaEmprestimo().plusDays(7));
@@ -46,7 +46,7 @@ public class GerenciaEmprestimo {
 		}
 	}
 
-	public void devolveLivro(Livro livro) {
+	public void devolverLivro(Livro livro) {
 		Emprestimo emprestimoaux = null;
 		for (Emprestimo emprestimo : todosemprestimos) {
 			if (emprestimo.getLivro().equals(livro)) {
@@ -78,13 +78,13 @@ public class GerenciaEmprestimo {
 		return "\n";
 	}
 
-	public void carregaDadosEmprestimo() {
+	public void carregarDadosEmprestimo() {
 
-		todosemprestimos = emprestimodao.carregaDadosEmprestimo();
+		todosemprestimos = emprestimodao.carregarDadosEmprestimo();
 	}
 
-	public void gravaDadosEmprestimo() {
+	public void gravarDadosEmprestimo() {
 
-		emprestimodao.gravaDadosEmprestimo(todosemprestimos);
+		emprestimodao.gravarDadosEmprestimo(todosemprestimos);
 	}
 }

@@ -15,7 +15,7 @@ import java.io.FileReader;
 
 public class LivrosDao {
 
-	public void gravaDadosLivros(List<Livro> livros) {
+	public void gravarDadosLivros(List<Livro> livros) {
 
 		Gson gson = new Gson();
 		String json = gson.toJson(livros);
@@ -30,7 +30,7 @@ public class LivrosDao {
 		}
 	}
 
-	public List<Livro> carregaDadosLivros() {
+	public List<Livro> carregarDadosLivros() {
 
 		Type typeFound = new TypeToken<ArrayList<Livro>>() {
 		}.getType();

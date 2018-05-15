@@ -17,11 +17,11 @@ public class CadastroPessoas {
 		return clientes;
 	}
 
-	public void adicionaPessoa(Pessoa pessoa) {
+	public void adicionarPessoa(Pessoa pessoa) {
 		clientes.add(pessoa);
 	}
 
-	public Pessoa buscaPessoaPorNome(String nome) {
+	public Pessoa buscarPessoaPorNome(String nome) {
 		for (Pessoa pessoa : clientes) {
 			if (pessoa.getNome().equals(nome)) {
 				return pessoa;
@@ -30,15 +30,15 @@ public class CadastroPessoas {
 		return null;
 	}
 
-	public void ordenaTop10() {
+	public void ordenarTop10() {
 		Collections.sort(clientes);
 	}
 
-	public void carregaDadosPessoa() {
-		clientes = pessoadao.carregaDadosPessoa();
+	public void carregarDadosPessoa() {
+		clientes = pessoadao.carregarDadosPessoa();
 	}
 
-	public void guardaDadosPessoa() {
-		pessoadao.gravaDadosPessoa(clientes);
+	public void guardarDadosPessoa() {
+		pessoadao.gravarDadosPessoa(clientes);
 	}
 }
