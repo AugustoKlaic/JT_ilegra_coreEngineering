@@ -23,7 +23,6 @@ public class PessoaDao {
 		try (FileWriter writer = new FileWriter("Pessoas.json")){
 			
 			writer.write(json);
-			writer.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

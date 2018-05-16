@@ -22,7 +22,6 @@ public class EmprestimosDao {
 		try (FileWriter writer = new FileWriter("Emprestimos.json")){
 			
 			writer.write(json);
-			writer.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -23,7 +23,6 @@ public class LivrosDao {
 		try (FileWriter writer = new FileWriter("Livros.json")){
 			
 			writer.write(json);
-			writer.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
