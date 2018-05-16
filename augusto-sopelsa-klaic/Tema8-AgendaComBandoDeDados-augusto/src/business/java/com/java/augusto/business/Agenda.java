@@ -13,40 +13,40 @@ public class Agenda {
 		this.pessoasdao = new PessoaDao();
 	}
 
-	public void adicionaContato(Pessoa pessoa) {
+	public void adicionarContato(Pessoa pessoa) {
 
 		pessoasdao.adicionaContato(pessoa);
-		carregaDadosDoBanco();
+		carregarDadosDoBanco();
 	}
 
-	public void removeContato(int id) {
+	public void removerContato(int id) {
 		pessoasdao.removeContato(id);
-		carregaDadosDoBanco();
+		carregarDadosDoBanco();
 	}
 
 	public List<Pessoa> getTodasContatos() {
 		return pessoasdao.carregaDadosDoBanco();
 	}
 
-	public List<Pessoa> buscaContatoPorNome(String nomePessoa) {
+	public List<Pessoa> buscarContatoPorNome(String nomePessoa) {
 		List<Pessoa> pessoaaux = new ArrayList<Pessoa>();
 		pessoaaux = pessoasdao.buscaContatoPorNome(nomePessoa);
 		return pessoaaux;
 	}
 
-	public Pessoa buscaContatoPorId(int idPessoa) {
+	public Pessoa buscarContatoPorId(int idPessoa) {
 
 		Pessoa pessoaaux = null;
 		pessoaaux = pessoasdao.buscaContatoPorId(idPessoa);
 		return pessoaaux;
 	}
 	
-	public void ordenaLista(String tipo) {
+	public void ordenarLista(String tipo) {
 		pessoasdao.ordenaContatos(tipo);
 	}
 	
 
-	public void carregaDadosDoBanco() {
+	public void carregarDadosDoBanco() {
 		pessoasdao.carregaDadosDoBanco();
 	}
 }

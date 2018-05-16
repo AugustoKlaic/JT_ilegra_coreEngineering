@@ -29,11 +29,11 @@ public class AgendaTeste {
 	public void testeAdicionaPessoa() {
 		
 		System.out.println("Adiciona pessoa.");
-		contatos.adicionaContato(pessoa1);
+		contatos.adicionarContato(pessoa1);
 		assertFalse(contatos.getTodasContatos().isEmpty());
 		System.out.println("Verifica se Array não esta vazio.");
 		System.out.println("Adiciona outra pessoa.");
-		contatos.adicionaContato(pessoa2);
+		contatos.adicionarContato(pessoa2);
 		assertEquals(2, contatos.getTodasContatos().size());
 		System.out.println("Verifica se o tamanho do Array é 2.");
 	}
@@ -42,14 +42,14 @@ public class AgendaTeste {
 	public void testeRemovePessoa() {
 
 		System.out.println("Adiciona 4 pessoas.");
-		contatos.adicionaContato(pessoa1);
-		contatos.adicionaContato(pessoa2);
-		contatos.adicionaContato(pessoa3);
-		contatos.adicionaContato(pessoa4);
+		contatos.adicionarContato(pessoa1);
+		contatos.adicionarContato(pessoa2);
+		contatos.adicionarContato(pessoa3);
+		contatos.adicionarContato(pessoa4);
 		System.out.println("Testa se o array tem tamanho 4");
 		assertEquals(4, contatos.getTodasContatos().size());
 		System.out.println("Remove pessoa do ID = 2");
-		contatos.removeContato(2);
+		contatos.removerContato(2);
 		System.out.println("Testa se o array tem tamanho 3");
 		assertEquals(3, contatos.getTodasContatos().size());
 	}
@@ -60,14 +60,14 @@ public class AgendaTeste {
 		
 		System.out.println("Testando busca por nome.");
 		System.out.println("Adiciona 4 pessoas.");
-		contatos.adicionaContato(pessoa1);
-		contatos.adicionaContato(pessoa2);
-		contatos.adicionaContato(pessoa3);
-		contatos.adicionaContato(pessoa4);
+		contatos.adicionarContato(pessoa1);
+		contatos.adicionarContato(pessoa2);
+		contatos.adicionarContato(pessoa3);
+		contatos.adicionarContato(pessoa4);
 		System.out.println("Testa se o array tem tamanho 4");
 		assertEquals(4, contatos.getTodasContatos().size());
 		System.out.println("Buscando pessoa com nome 'Roberto'.");
-		pessoasaux = contatos.buscaContatoPorNome("Roberto");
+		pessoasaux = contatos.buscarContatoPorNome("Roberto");
 		assertTrue(pessoasaux.contains(pessoa3));
 	}
 	
@@ -76,14 +76,14 @@ public class AgendaTeste {
 		
 		System.out.println("Testando busca por id.");
 		System.out.println("Adiciona 4 pessoas.");
-		contatos.adicionaContato(pessoa1);
-		contatos.adicionaContato(pessoa2);
-		contatos.adicionaContato(pessoa3);
-		contatos.adicionaContato(pessoa4);
+		contatos.adicionarContato(pessoa1);
+		contatos.adicionarContato(pessoa2);
+		contatos.adicionarContato(pessoa3);
+		contatos.adicionarContato(pessoa4);
 		System.out.println("Testa se o array tem tamanho 4");
 		assertEquals(4, contatos.getTodasContatos().size());
 		System.out.println("Buscando pessoa com ID = 4.");
-		Pessoa pessoaaux = contatos.buscaContatoPorId(4);
+		Pessoa pessoaaux = contatos.buscarContatoPorId(4);
 		assertEquals(pessoa4, pessoaaux);
 	}
 }

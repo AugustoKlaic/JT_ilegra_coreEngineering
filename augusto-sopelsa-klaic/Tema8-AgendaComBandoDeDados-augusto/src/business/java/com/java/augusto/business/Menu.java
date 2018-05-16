@@ -8,7 +8,7 @@ public class Menu {
 
 	public Menu() {
 		agenda = new Agenda();
-		agenda.carregaDadosDoBanco();
+		agenda.carregarDadosDoBanco();
 	}
 
 	public void inicializa() {
@@ -55,7 +55,7 @@ public class Menu {
 		Scanner scannerfone = new Scanner(System.in);
 		String lerDoTecladoFone = scannerfone.nextLine();
 
-		agenda.adicionaContato(new Pessoa(lerDoTecladoNome, lerDoTecladoEmail, lerDoTecladoFone));
+		agenda.adicionarContato(new Pessoa(lerDoTecladoNome, lerDoTecladoEmail, lerDoTecladoFone));
 	}
 
 	public void remove() {
@@ -63,7 +63,7 @@ public class Menu {
 		Scanner scannerId = new Scanner(System.in);
 		int lerDoTecladoId = scannerId.nextInt();
 
-		agenda.removeContato(lerDoTecladoId);
+		agenda.removerContato(lerDoTecladoId);
 	}
 
 	public void verlista() {
@@ -74,7 +74,7 @@ public class Menu {
 		System.out.println("Deseja ordenar a lista por nome ou por ID?[Digite: nome ou id]\n ");
 		Scanner scanner = new Scanner(System.in);
 		String lerDoTeclado = scanner.nextLine();
-		agenda.ordenaLista(lerDoTeclado);
+		agenda.ordenarLista(lerDoTeclado);
 		
 		
 		for (Pessoa p : agenda.getTodasContatos()) {
@@ -93,14 +93,14 @@ public class Menu {
 			System.out.println("Informe o nome do contato:\n ");
 			Scanner scannernome = new Scanner(System.in);
 			String lerDoTecladoNome = scannernome.nextLine();
-			System.out.println(agenda.buscaContatoPorNome(lerDoTecladoNome));
+			System.out.println(agenda.buscarContatoPorNome(lerDoTecladoNome));
 			break;
 
 		case "I":
 			System.out.println("Informe o Id do contato:\n ");
 			Scanner scannerid = new Scanner(System.in);
 			int lerDoTecladoId = scannerId.nextInt();
-			System.out.println(agenda.buscaContatoPorId(lerDoTecladoId));
+			System.out.println(agenda.buscarContatoPorId(lerDoTecladoId));
 			break;
 		}
 	}
