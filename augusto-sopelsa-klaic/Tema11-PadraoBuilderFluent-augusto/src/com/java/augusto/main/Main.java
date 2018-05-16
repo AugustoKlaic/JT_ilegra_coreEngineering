@@ -9,10 +9,10 @@ public class Main{
 	public static void main(String[] args) {
 		
 		Pessoa pessoa = new Pessoa.PessoaBuilder()
-						.adicionaNome("Augusto")
-						.adicionaDataNascimento(LocalDate.now())
-						.adicionaEndereco("Santo Antonio",123,"Porto Alegre","Rio Grande do Sul")
-						.CriaPessoa();
+						.adicionarNome("Augusto")
+						.adicionarDataNascimento(LocalDate.now())
+						.adicionarEndereco("Santo Antonio",123,"Porto Alegre","Rio Grande do Sul")
+						.criarPessoa();
 		
 		System.out.println(pessoa.getNome());
 		System.out.println(pessoa.getDatanascimento());

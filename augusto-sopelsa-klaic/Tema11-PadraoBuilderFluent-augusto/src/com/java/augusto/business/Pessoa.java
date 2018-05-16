@@ -26,28 +26,27 @@ public class Pessoa {
 		return nome;
 	}
 
-	public static class PessoaBuilder
-	{
+	public static class PessoaBuilder {
 		private String nome;
 		private LocalDate datanascimento;
 		private Endereco endereco;
 
-		public PessoaBuilder adicionaDataNascimento(LocalDate datanascimento) {
+		public PessoaBuilder adicionarDataNascimento(LocalDate datanascimento) {
 			this.datanascimento = datanascimento;
 			return this;
 		}
 
-		public PessoaBuilder adicionaNome(String nome) {
+		public PessoaBuilder adicionarNome(String nome) {
 			this.nome = nome;
 			return this;
 		}
-		
-		public PessoaBuilder adicionaEndereco(String rua, int numero, String cidade,String estado) {
-			this.endereco = new Endereco(rua,numero,cidade,estado);
+
+		public PessoaBuilder adicionarEndereco(String rua, int numero, String cidade, String estado) {
+			this.endereco = new Endereco(rua, numero, cidade, estado);
 			return this;
 		}
-		
-		public Pessoa CriaPessoa() {
+
+		public Pessoa criarPessoa() {
 			return new Pessoa(this);
 		}
 	}
