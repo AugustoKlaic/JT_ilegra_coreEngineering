@@ -20,8 +20,8 @@ public class PessoaDao {
 		Gson gson = new Gson();
 		String json = gson.toJson(pessoas);
 
-		try {
-			FileWriter writer = new FileWriter("Pessoas.json");
+		try (FileWriter writer = new FileWriter("Pessoas.json")){
+			
 			writer.write(json);
 			writer.close();
 
@@ -32,14 +32,12 @@ public class PessoaDao {
 
 	public List<Pessoa> carregarDadosPessoa() {
 
-		Type typeFound = new TypeToken<ArrayList<Pessoa>>() {
-		}.getType();
-		BufferedReader jsonReader;
-		try {
-			jsonReader = new BufferedReader(new FileReader("Pessoas.json"));
+		Type typeFound = new TypeToken<ArrayList<Pessoa>>() {}.getType();
+		 
+		try (BufferedReader jsonReader = new BufferedReader(new FileReader("Pessoas.json"))){
 			List<Pessoa> listPerson = new Gson().fromJson(jsonReader, typeFound);
 			return listPerson;
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return new ArrayList<Pessoa>();

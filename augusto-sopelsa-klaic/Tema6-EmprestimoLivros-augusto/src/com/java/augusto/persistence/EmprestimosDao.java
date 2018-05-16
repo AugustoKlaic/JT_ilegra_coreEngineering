@@ -19,8 +19,8 @@ public class EmprestimosDao {
 		Gson gson = new Gson();
 		String json = gson.toJson(emprestimos);
 
-		try {
-			FileWriter writer = new FileWriter("Emprestimos.json");
+		try (FileWriter writer = new FileWriter("Emprestimos.json")){
+			
 			writer.write(json);
 			writer.close();
 
@@ -33,12 +33,12 @@ public class EmprestimosDao {
 
 		Type typeFound = new TypeToken<ArrayList<Emprestimo>>() {
 		}.getType();
-		BufferedReader jsonReader;
-		try {
-			jsonReader = new BufferedReader(new FileReader("Emprestimos.json"));
+		
+		try(BufferedReader jsonReader = new BufferedReader(new FileReader("Emprestimos.json"))) {
+			
 			List<Emprestimo> listEmprestimo = new Gson().fromJson(jsonReader, typeFound);
 			return listEmprestimo;
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return new ArrayList<Emprestimo>();
