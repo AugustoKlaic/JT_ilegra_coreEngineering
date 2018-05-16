@@ -1,9 +1,9 @@
 package com.java.augusto.business;
 
-public class MensagemSMS implements Mensagem{
+public class MensagemSMS implements MensagemStrategy{
 	
 	@Override
-	public String enviaMensagem(Cliente cliente) {
-		return "Enviando mensagem por SMS para "+ cliente.getNome();
+	public String enviaMensagem() {
+		return "Enviando mensagem por SMS para ";
 	}
 }
