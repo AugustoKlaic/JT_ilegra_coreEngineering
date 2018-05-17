@@ -1,12 +1,16 @@
 package com.java.augusto.business;
 
+import com.java.augusto.business.notificacao.NotificacaoStrategy;
+
 public class GerenciadorNotificacao{
 	
-	public String enviaParaCliente(Cliente cliente) {
-		if(cliente.getTelefone().equals("")) {
-			return new MensagemEmail().enviaMensagem() + cliente.getNome();
-		}
-		else
-			return new MensagemSMS().enviaMensagem() + cliente.getNome();
+	private NotificacaoStrategy notificacao;
+	
+	public GerenciadorNotificacao(NotificacaoStrategy notificacao) {
+		this.notificacao = notificacao;
+	}
+	
+	public String enviar() {
+		return notificacao.enviar();
 	}
 }
