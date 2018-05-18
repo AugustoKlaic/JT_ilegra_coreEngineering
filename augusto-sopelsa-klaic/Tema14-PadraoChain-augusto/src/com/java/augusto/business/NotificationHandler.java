@@ -16,7 +16,6 @@ public abstract class NotificationHandler {
 		}
 		if(notification != null) {
 			notification.processaRequest(request);
-			//notification.receberNotificacao();
-		}
+			}
 	}
 }
