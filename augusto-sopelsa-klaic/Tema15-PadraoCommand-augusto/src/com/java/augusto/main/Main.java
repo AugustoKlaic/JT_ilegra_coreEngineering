@@ -8,29 +8,20 @@ import com.java.augusto.business.command.SacarDinheiroCommand;
 
 public class Main{
 	 public static void main(String[] args) {
-		 Banco banco = new Banco();
+		 
 		 Cliente cliente = new Cliente("Augusto", "123123123123");
-		 Conta conta = new Conta("4444232",cliente,10000.00);
-		 DepositarDinheiroCommand depcommand = new DepositarDinheiroCommand(conta);
-		 SacarDinheiroCommand sacarcommand = new SacarDinheiroCommand(conta);
+		 Conta conta = new Conta("4444232",cliente,0.0);
+		 Banco banco = new Banco(conta);
+		 DepositarDinheiroCommand depcommand = new DepositarDinheiroCommand(conta,300);
+		 SacarDinheiroCommand sacarcommand = new SacarDinheiroCommand(conta,200);
 		 
-		 banco.setCommand(depcommand);
-		 banco.executarCommand(200.00);
-		 System.out.println(conta.getCliente().getNome());
-		 System.out.println(conta.getSaldo());
 		 
-		 banco.setCommand(sacarcommand);
-		 banco.executarCommand(300.00);
-		 System.out.println(conta.getCliente().getNome());
-		 System.out.println(conta.getSaldo());
+		 banco.recebeCommand(depcommand);
+		 banco.executarCommand();
+		 banco.calculaSaldo();
 		 
-		for(int i=0; i<conta.getHistorico().size(); i++) {
-			if(conta.getHistorico().get(i) < 0) {
-				System.out.println("Saque de "+ (conta.getHistorico().get(i) * -1) +" Reais");
-			}
-			else if(conta.getHistorico().get(i) > 0) {
-				System.out.println("Deposito de "+ conta.getHistorico().get(i) +" Reais");
-			}
-		}
+		 banco.recebeCommand(sacarcommand);
+		 banco.executarCommand();
+		 banco.calculaSaldo();
 	 }
 }
