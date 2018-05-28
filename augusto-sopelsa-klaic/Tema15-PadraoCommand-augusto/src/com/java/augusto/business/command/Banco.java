@@ -31,7 +31,7 @@ public class Banco{
 				saldo = saldo+ ((DepositarDinheiroCommand) command).getValor();
 				
 			}
-			else if(command instanceof SacarDinheiroCommand) {
+			else{
 				saldo = saldo  + (((SacarDinheiroCommand) command).getValor() * -1);
 				
 			}
