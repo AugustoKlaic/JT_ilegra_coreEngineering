@@ -1,1 +1,0 @@
-Jonathan de Britto Sedrez

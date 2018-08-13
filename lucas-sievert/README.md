@@ -1,1 +1,0 @@
-Lucas Sievert da Silva
